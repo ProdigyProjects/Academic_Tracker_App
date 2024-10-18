@@ -1,13 +1,13 @@
-package com.example.academictrackerapp.Elvis.home
+package com.example.academictrackerapp.katiana.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class RegistrationViewModel : ViewModel() {
+class LoginViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Registration Fragment"
+        value = "This is Login Fragment"
     }
     val text: LiveData<String> = _text
 }
