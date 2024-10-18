@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.ui.home
+package com.example.academictrackerapp.Elvis.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,14 +22,14 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
+        val registrationViewModel =
+            ViewModelProvider(this).get(RegistrationViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
+        registrationViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
