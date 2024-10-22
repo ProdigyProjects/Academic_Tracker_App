@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Elvis.home
+package com.example.academictrackerapp.elvis.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

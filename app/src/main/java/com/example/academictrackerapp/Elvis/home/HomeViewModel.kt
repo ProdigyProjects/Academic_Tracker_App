@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Elvis.home
+package com.example.academictrackerapp.elvis.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
