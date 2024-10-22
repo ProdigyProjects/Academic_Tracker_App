@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".elvis.notifications.NotificationsFragment">
+
+    <FrameLayout
+        android:layout_width="523dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/reminders_heading"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.435" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="306dp"
+        android:layout_height="518dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497">
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/create_btn"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Reminder name"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/study_english"
+                    android:inputType="text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="Date"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/date"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/edit_button"
+                    android:src="@android:drawable/ic_menu_edit"
+                    tools:ignore="NestedWeights" />
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/delete_button"
+                    android:src="@android:drawable/ic_menu_delete" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Reminder name"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/study_maths"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Date"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/_23_may_2024_02_00pm"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/edit_button"
+                        android:src="@android:drawable/ic_menu_edit"
+                        tools:ignore="NestedWeights" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton6"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/delete_button"
+                        android:src="@android:drawable/ic_menu_delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Reminder name"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/study_maths"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Date"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/_23_may_2024_02_00pm"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/imageButton7"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/edit_button"
+                        android:src="@android:drawable/ic_menu_edit"
+                        tools:ignore="NestedWeights" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton8"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/delete_button"
+                        android:src="@android:drawable/ic_menu_delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Reminder name"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/study_maths"
+                        android:inputType="text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="Date"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/_23_may_2024_02_00pm"
+                        android:inputType="text"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageButton
+                        android:id="@+id/imageButton9"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/edit_button"
+                        android:src="@android:drawable/ic_menu_edit"
+                        tools:ignore="NestedWeights" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton10"
+                        android:layout_width="60dp"
+                        android:layout_height="48dp"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/delete_button"
+                        android:src="@android:drawable/ic_menu_delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
