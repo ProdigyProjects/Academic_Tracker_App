@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.academictrackerapp.MainActivity
+import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -28,10 +31,26 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textLogin
+        binding.loginButton.setOnClickListener {
+            val email = binding.emailInput.text.toString()
+            val password = binding.passwordInput.text.toString()
+
+            if(email.isNotEmpty() && password.isNotEmpty()) {
+                MainActivity.auth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener {
+                        if(it.isSuccessful) {
+                            findNavController().navigate(R.id.action_loginFragment_to_DashboardFragment)
+                        }
+                    }.addOnFailureListener {
+                        Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+                    }
+            }
+        }
+
+        /*val textView: TextView = binding.textLogin
         loginViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
-        }
+        }*/
         return root
     }
 

@@ -7,19 +7,35 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.academictrackerapp.Elvis.home.RegistrationFragment"
+        android:name="com.example.academictrackerapp.elvis.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_homeFragment_to_registrationFragment"
+            app:destination="@id/navigation_registration" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.academictrackerapp.Elvis.dashboard.RegistrationFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_registration" />
+        android:id="@+id/navigation_registration"
+        android:name="com.example.academictrackerapp.katiana.registration.RegistrationFragment"
+        android:label="@string/title_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/navigation_login" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.academictrackerapp.Elvis.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_login" />
+        android:id="@+id/navigation_login"
+        android:name="com.example.academictrackerapp.katiana.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_DashboardFragment"
+            app:destination="@id/navigation_home" />
+        <!-- make it to go to dashboard instead-->
+    </fragment>
 </navigation>
