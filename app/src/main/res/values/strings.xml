@@ -3,6 +3,32 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!-- ==========================     Katiana Stuff Starts    ==========================-->
     <string name="title_registration">Registration</string>
     <string name="title_login">Login</string>
+
+    <string name="fullNameLabel">Full Name</string>
+    <string name="emailLabel">Email</string>
+    <string name="institutionNameLabel">Institution Name</string>
+    <string name="qualificationLabel">Qualification</string>
+    <string name="passwordLabel">Password</string>
+
+    <string name="fullNameInput">Enter your full name</string>
+    <string name="emailInput">Enter your email</string>
+    <string name="institutionNameInput">Enter institution name</string>
+    <string name="qualificationInput">Enter your qualification</string>
+    <string name="passwordInput">Enter your password</string>
+
+    <string name="dont_have_account">Don\'t Have An Account?</string>
+    <string name="already_have_account">Already Have An Account?</string>
+
+    <string name="button_register">Register</string>
+    <string name="button_logIn">Sign In</string>
+    <!-- ==========================     Katiana Stuff ends    ==========================-->
+
+    <!-- ==========================     Elvis Stuff Starts    ==========================-->
+    <string name="login_btn">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <!-- ==========================     Elvis Stuff ends    ==========================-->
 </resources>

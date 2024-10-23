@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Elvis.notifications;
+package com.example.academictrackerapp.elvis.notifications;
 
 public class hhf {
 }
