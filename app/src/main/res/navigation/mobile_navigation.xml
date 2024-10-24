@@ -26,6 +26,10 @@
         <action
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_registrationFragment_to_DashboardFragment"
+            app:destination="@id/navigation_home" />
+        <!-- make it to go to dashboard instead-->
     </fragment>
 
     <fragment
@@ -33,6 +37,9 @@
         android:name="com.example.academictrackerapp.katiana.login.LoginFragment"
         android:label="@string/title_login"
         tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/navigation_registration" />
         <action
             android:id="@+id/action_loginFragment_to_DashboardFragment"
             app:destination="@id/navigation_home" />
