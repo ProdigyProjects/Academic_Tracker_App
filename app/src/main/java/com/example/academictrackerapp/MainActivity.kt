@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         // Add a listener to control the visibility of the bottom bar
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.navigation_dashboard,
+                R.id.navigation_pageLink,
                 R.id.navigation_notifications -> {
                     // Show the bottom bar on these pages
                     navView.visibility = View.VISIBLE

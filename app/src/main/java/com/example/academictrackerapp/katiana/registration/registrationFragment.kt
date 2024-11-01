@@ -35,6 +35,7 @@ class RegistrationFragment : Fragment() {
             findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
         }
 
+
         binding.registerButton.setOnClickListener {
             val profileImage = binding.profileImage.imageAlpha.toString()
             val fullName = binding.fullNameInput.text.toString()
@@ -68,7 +69,7 @@ class RegistrationFragment : Fragment() {
                                             .addOnCompleteListener { authResult ->
                                                 if (authResult.isSuccessful) {
                                                     Toast.makeText(requireContext(), "User registered and logged in successfully!", Toast.LENGTH_LONG).show()
-                                                    findNavController().navigate(R.id.action_registrationFragment_to_DashboardFragment)
+                                                    findNavController().navigate(R.id.action_registrationFragment_to_MainFragment)
                                                 }
                                             }.addOnFailureListener { e ->
                                                 Toast.makeText(requireContext(), "Login failed: ${e.localizedMessage}", Toast.LENGTH_LONG).show()

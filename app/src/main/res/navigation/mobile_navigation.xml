@@ -27,8 +27,8 @@
             android:id="@+id/action_registrationFragment_to_loginFragment"
             app:destination="@id/navigation_login" />
         <action
-            android:id="@+id/action_registrationFragment_to_DashboardFragment"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_registrationFragment_to_MainFragment"
+            app:destination="@id/navigation_pageLink" />
         <!-- make it to go to dashboard instead-->
     </fragment>
 
@@ -41,8 +41,74 @@
             android:id="@+id/action_loginFragment_to_registrationFragment"
             app:destination="@id/navigation_registration" />
         <action
-            android:id="@+id/action_loginFragment_to_DashboardFragment"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_loginFragment_to_MainFragment"
+            app:destination="@id/navigation_pageLink" />
         <!-- make it to go to dashboard instead-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pageLink"
+        android:name="com.example.academictrackerapp.katiana.LinkPages"
+        android:label="Page for navigation"
+        tools:layout="@layout/link_to_pages">
+        <action
+            android:id="@+id/toDashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/toStudyRecommendations"
+            app:destination="@id/navigation_progressTracking" />
+        <action
+            android:id="@+id/toMaterialMarket"
+            app:destination="@id/navigation_marketplace" />
+        <action
+            android:id="@+id/toProfilePage"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.academictrackerapp.katiana.dashboard.Dashboard"
+        android:label="Page for dashboard"
+        tools:layout="@layout/dashboard">
+        <action
+            android:id="@+id/toStudyRecommendations"
+            app:destination="@id/navigation_progressTracking" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_progressTracking"
+        android:name="com.example.academictrackerapp.katiana.progressTracking.ProgressTracking"
+        android:label="Page for study recommendations"
+        tools:layout="@layout/progress_tracking">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_marketplace"
+        android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialMarketplace"
+        android:label="Page for study marketplace"
+        tools:layout="@layout/material_marketplace">
+        <action
+            android:id="@+id/toUploadMaterial"
+            app:destination="@id/navigation_uploadMaterial" />
+        <action
+            android:id="@+id/toViewMaterialPage"
+            app:destination="@id/navigation_material_page_view" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.academictrackerapp.katiana.userProfile.UserProfileFragment"
+        android:label="Page for User Profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_uploadMaterial"
+        android:name="com.example.academictrackerapp.katiana.materialMarketplace.UploadMaterial"
+        android:label="Page to upload material"
+        tools:layout="@layout/upload_material">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_material_page_view"
+        android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialPageView"
+        android:label="Page to view material"
+        tools:layout="@layout/material_page_view">
     </fragment>
 </navigation>

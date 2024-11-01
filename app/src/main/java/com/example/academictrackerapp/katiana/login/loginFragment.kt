@@ -43,7 +43,7 @@ class LoginFragment : Fragment() {
                 MainActivity.auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
                         if(it.isSuccessful) {
-                            findNavController().navigate(R.id.action_loginFragment_to_DashboardFragment)
+                            findNavController().navigate(R.id.action_loginFragment_to_MainFragment)
                         }
                     }.addOnFailureListener {
                         Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()

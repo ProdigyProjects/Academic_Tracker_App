@@ -30,5 +30,6 @@
     <!-- ==========================     Elvis Stuff Starts    ==========================-->
     <string name="login_btn">Login</string>
     <string name="sign_up">Sign Up</string>
+    <string name="todo">TODO</string>
     <!-- ==========================     Elvis Stuff ends    ==========================-->
 </resources>

@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="primaryColor">#87CEEB</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <color name="teal_200">#a0a5ee</color>
+    <color name="teal_700">#585858</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="link_blue">#0000EE</color>
+    <color name="link_blue">#5660f4</color>
+
+    <color name="sky_blue">#87CEEB</color>
+    <color name="bright_green">#32CD32</color>
+    <color name="soft_yellow">#FFD700</color>
+    <color name="coral">#FF7F50</color>
+    <color name="lavender">#E6E6FA</color>    <!-- Neutral Colors -->
+    <color name="light_gray">#F5F5F5</color>
+    <color name="charcoal">#333333</color>    <!-- Additional Colors for States -->
+    <color name="success">#4CAF50</color> <!-- For successful actions -->
+    <color name="warning">#FFC107</color> <!-- For warnings -->
+    <color name="error">#F44336</color> <!-- For errors -->
 </resources>
