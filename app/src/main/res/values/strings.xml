@@ -3,15 +3,39 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!-- ==========================     Katiana Stuff Starts    ==========================-->
     <string name="title_registration">Registration</string>
     <string name="title_login">Login</string>
-    <string name="home_header">Academic Tracker App</string>
+
+    <string name="fullNameLabel">Full Name</string>
+    <string name="emailLabel">Email</string>
+    <string name="institutionNameLabel">Institution Name</string>
+    <string name="qualificationLabel">Qualification</string>
+    <string name="passwordLabel">Password</string>
+
+    <string name="fullNameInput">Enter your full name</string>
+    <string name="emailInput">Enter your email</string>
+    <string name="institutionNameInput">Enter institution name</string>
+    <string name="qualificationInput">Enter your qualification</string>
+    <string name="passwordInput">Enter your password</string>
+
+    <string name="dont_have_account">Don\'t Have An Account?</string>
+    <string name="already_have_account">Already Have An Account?</string>
+
+    <string name="button_register">Register</string>
+    <string name="button_logIn">Sign In</string>
+    <!-- ==========================     Katiana Stuff ends    ==========================-->
+
+    <!-- ==========================     Elvis Stuff Starts    ==========================-->
     <string name="login_btn">Login</string>
     <string name="sign_up">Sign Up</string>
+    <string name="todo">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="create_btn">+ Create</string>
     <string name="reminders_heading">Reminders</string>
+    <string name="date_and_time">Date and Time</string>
     <string name="delete_button">Delete Button</string>
     <string name="edit_button">Edit Button</string>
     <string name="study_maths">Study Maths</string>
@@ -33,4 +57,14 @@
     <string name="select_reminder_time">Select Reminder Time</string>
     <string name="study_english">Study English</string>
     <string name="date">23 May, 2024 02:00PM</string>
+    <string name="flashcards">Flashcards</string>
+    <string name="progress_tracking">Progress Tracking</string>
+    <string name="goal_setting_time_management">Goal Setting - Time Management</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="peer_collaboration">Peer Collaboration</string>
+    <string name="material_marketplace">Material Marketplace</string>
+    <string name="main_features">Main Features</string>
+    <string name="additional_features">Additional Features</string>
+    <string name="log_out">Log Out</string>
+    <!-- ==========================     Elvis Stuff ends    ==========================-->
 </resources>

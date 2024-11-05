@@ -10,37 +10,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Search Flashcard"
-                android:textColor="@color/black"
-                android:gravity="center_horizontal"
-                android:layout_gravity="start|center_vertical"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Flashcard"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_gravity="start|center_vertical"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <!-- Search input field -->
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_horizontal">
-                <!-- Search input field -->
-                <EditText
-                    android:id="@+id/searchBar"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Search..."
-                    android:padding="12dp"
-                    android:background="@android:drawable/edit_text"
-                    android:drawableEnd="@android:drawable/ic_menu_search"
-                    android:drawablePadding="8dp"
-                    android:inputType="text"
-                    android:imeOptions="actionSearch"
-                    android:textColorHint="@color/black"
-                    android:layout_marginBottom="20dp"/>
-            </LinearLayout>
+                android:hint="Search..."
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:drawableEnd="@android:drawable/ic_menu_search"
+                android:drawablePadding="8dp"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:textColorHint="@color/black"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"

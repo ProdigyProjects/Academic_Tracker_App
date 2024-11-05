@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="58dp"
+    tools:context=".katiana.userProfile.UserProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Profile Picture -->
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileImage"
+            android:layout_width="131dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_placeholder"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fullNameInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:autofillHints="name"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:padding="0dp"
+            app:layout_constraintTop_toBottomOf="@id/profileImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginTop="8dp" />
+
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/emailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/emailLabel"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/fullNameInput"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/emailInput"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/emailLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginTop="8dp" />
+
+
+        <!-- Institution Name -->
+        <TextView
+            android:id="@+id/institutionNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/institutionNameLabel"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/emailInput"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/institutionNameInput"
+            android:autofillHints="organizationName"
+            android:inputType="text"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Qualification -->
+        <TextView
+            android:id="@+id/qualificationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qualificationLabel"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameInput"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/qualificationInput"
+            android:layout_width="0dp"
+            android:autofillHints="qualifications"
+            android:inputType="text"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/qualificationLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Password -->
+        <TextView
+            android:id="@+id/passwordLabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Password"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/qualificationInput"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/passwordInput1"
+            android:layout_width="0dp"
+            android:autofillHints="password"
+            android:inputType="textPassword"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/passwordLabel1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/passwordLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Password"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/passwordInput1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/passwordInput2"
+            android:layout_width="0dp"
+            android:autofillHints="password"
+            android:inputType="textPassword"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/passwordLabel2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            app:layout_constraintTop_toBottomOf="@id/passwordInput2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/white"
+            android:clickable="true"
+            app:srcCompat="@drawable/camera_upload_photo"
+            android:scaleType="center"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:src="@drawable/camera_upload_photo"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+            app:layout_constraintEnd_toEndOf="@+id/profileImage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

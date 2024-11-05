@@ -6,9 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.academictrackerapp.R
+import com.example.academictrackerapp.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
+    private var _binding: FragmentDashboardBinding? = null
+    private val binding get() = _binding!!
 
     companion object {
         fun newInstance() = DashboardFragment()
@@ -26,6 +30,12 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+
+
+        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        return root
     }
+
 }

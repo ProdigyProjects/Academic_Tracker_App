@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="4dp"
+    android:layout_marginBottom="58dp"
     tools:context=".elvis.home.DashboardFragment">
 
     <LinearLayout
@@ -408,7 +409,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

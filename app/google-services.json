@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934696075882",
+    "project_id": "academic-achievement-tracker",
+    "storage_bucket": "academic-achievement-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934696075882:android:187aaf414ee2dfeb338013",
+        "android_client_info": {
+          "package_name": "com.example.academictrackerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArgh6lgtbEUCTbDrm-VYG1cBSYHruQmCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
