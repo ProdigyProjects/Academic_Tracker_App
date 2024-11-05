@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Add more tomorrow after merging -->
+    <item
+        android:id="@+id/navigation_link_to_pages"
+        android:title="@string/main_features"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/navigation_link_to_pages2"
+        android:title="@string/additional_features"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/navigation_marketplace"
+        android:title="@string/log_out"
+        app:showAsAction="never">
+    </item>
+</menu>

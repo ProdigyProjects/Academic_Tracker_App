@@ -23,9 +23,9 @@ class Dashboard : Fragment() {
         _binding = DashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.moreProgress.setOnClickListener {
+        /*binding.moreProgress.setOnClickListener {
             findNavController().navigate(R.id.toStudyRecommendations)
-        }
+        }*/
 
         return root
     }

@@ -23,20 +23,28 @@ class LinkPages : Fragment() {
         _binding = LinkToPagesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.dashboard.setOnClickListener {
-            findNavController().navigate(R.id.toDashboard)
+        binding.flashcards.setOnClickListener {
+            findNavController().navigate(R.id.toFlashcards)
+        }
+
+        binding.goalsSettings.setOnClickListener {
+            findNavController().navigate(R.id.toGoalsSettings)
         }
 
         binding.moreProgress.setOnClickListener {
-            findNavController().navigate(R.id.toStudyRecommendations)
+            findNavController().navigate(R.id.toProgressTracking)
+        }
+
+        binding.leaderboard.setOnClickListener {
+            findNavController().navigate(R.id.toLeaderboard)
+        }
+
+        binding.peerCollaboration.setOnClickListener {
+            findNavController().navigate(R.id.toPeerCollaboration)
         }
 
         binding.marketplace.setOnClickListener {
-            findNavController().navigate(R.id.toMaterialMarket)
-        }
-
-        binding.userProfile.setOnClickListener {
-            findNavController().navigate(R.id.toProfilePage)
+            findNavController().navigate(R.id.toMarketplace)
         }
 
         return root

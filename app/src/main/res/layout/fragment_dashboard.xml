@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="4dp"
+    android:layout_marginBottom="58dp"
+    tools:context=".elvis.home.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello Imraan!"
+            android:textColor="@color/black"
+            android:layout_gravity="start|center_vertical"
+            android:textSize="42sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Have a nice day!"
+            android:layout_gravity="start|center_vertical"
+            android:textSize="30sp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/myTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="My Tasks"
+                    android:backgroundTint="@color/grey"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/taskInProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="In-Progress"
+                    android:backgroundTint="@color/grey"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:id="@+id/taskCompleted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="Completed"
+                    android:backgroundTint="@color/grey"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- First Container -->
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/rectangular_background"
+                    android:layout_marginEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <!-- Project Name -->
+                        <ImageView
+                            android:id="@+id/taskIcon"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/white"
+                            android:contentDescription="Task Icon"
+                            android:src="@drawable/task_list_svgrepo_com" />
+
+                        <TextView
+                            android:id="@+id/projectName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Awesome Project"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Project Topic -->
+                    <TextView
+                        android:id="@+id/projectTopic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile App Development"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <!-- Project Date -->
+                    <TextView
+                        android:id="@+id/projectDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date: 2024-10-24"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/rectangular_background"
+                    android:layout_marginEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/taskIcon2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/task_list_svgrepo_com"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/white"
+                            android:contentDescription="Task Icon" />
+
+                        <TextView
+                            android:id="@+id/projectName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Business English"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/projectTopic2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Web Development"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/projectDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date: 2024-10-23"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="140dp"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/rectangular_background"
+                    android:layout_marginEnd="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical|center_horizontal">
+
+                        <ImageView
+                            android:id="@+id/taskIcon3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/task_list_svgrepo_com"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/white"
+                            android:contentDescription="Task Icon" />
+
+                        <TextView
+                            android:id="@+id/projectName3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Physical Science"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/projectTopic3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Front-end Development"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/projectDate3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date: 2024-10-23"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginTop="20dp"
+            android:text="Progress"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/progress"
+                        android:layout_width="34dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:contentDescription="Task Icon"
+                        android:src="@drawable/tasks_svgrepo_com__1_" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/progressTopic"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Design Changes"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/progressTime"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="2 Days ago"
+                            android:textSize="14sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/progress2"
+                        android:layout_width="34dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:contentDescription="Task Icon"
+                        android:src="@drawable/tasks_svgrepo_com__1_" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/progressTopic2"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Information Technology"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/progressTime2"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="1 Day ago"
+                            android:textSize="14sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/progress3"
+                        android:layout_width="34dp"
+                        android:layout_height="38dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/black"
+                        android:backgroundTint="@color/black"
+                        android:contentDescription="Task Icon"
+                        android:src="@drawable/tasks_svgrepo_com__1_" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/progressTopic3"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Hello Imraan!"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+
+                        <TextView
+                            android:id="@+id/progressTime3"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="1 Day ago"
+                            android:textSize="14sp"
+                            android:ellipsize="end"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+

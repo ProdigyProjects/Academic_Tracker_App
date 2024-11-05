@@ -31,5 +31,40 @@
     <string name="login_btn">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_btn">+ Create</string>
+    <string name="reminders_heading">Reminders</string>
+    <string name="date_and_time">Date and Time</string>
+    <string name="delete_button">Delete Button</string>
+    <string name="edit_button">Edit Button</string>
+    <string name="study_maths">Study Maths</string>
+    <string name="_23_may_2024_02_00pm">23 May, 2024 02:00PM</string>
+    <string name="task_title">Task Title*</string>
+    <string name="enter_title">Enter title</string>
+    <string name="enter_task_title">Enter task title</string>
+    <string name="reminder_time">Reminder Time</string>
+    <string name="note_optional">Note(Optional)</string>
+    <string name="note">Note</string>
+    <string name="clear">Clear</string>
+    <string name="save">Save</string>
+    <string name="reminder_frequency">Reminder Frequency</string>
+    <string name="one_time">One Time</string>
+    <string name="daily">Daily</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="etc">...</string>
+    <string name="select_reminder_time">Select Reminder Time</string>
+    <string name="study_english">Study English</string>
+    <string name="date">23 May, 2024 02:00PM</string>
+    <string name="flashcards">Flashcards</string>
+    <string name="progress_tracking">Progress Tracking</string>
+    <string name="goal_setting_time_management">Goal Setting - Time Management</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="peer_collaboration">Peer Collaboration</string>
+    <string name="material_marketplace">Material Marketplace</string>
+    <string name="main_features">Main Features</string>
+    <string name="additional_features">Additional Features</string>
+    <string name="log_out">Log Out</string>
     <!-- ==========================     Elvis Stuff ends    ==========================-->
 </resources>
