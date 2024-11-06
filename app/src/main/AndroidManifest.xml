@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -14,24 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AcademicTrackerApp"
         tools:targetApi="31">
-        <activity
-            android:name=".Imraan.grade.MarksListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Imraan.grade.MarksActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Imraan.Tracking.TrackingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Imraan.UserEngagement.SupportActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Imraan.TimeTable.TaskCreationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Imraan.TimeTable.TimetableActivity"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -49,7 +33,15 @@
         <activity
             android:name=".katiana.registration.RegistrationFragment"
             android:exported="false"
-            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".katiana.LinkPages"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".katiana.userProfile.UserProfileFragment"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".katiana.materialMarketplace.MaterialMarketplace"
+            android:exported="false"
             tools:ignore="LockedOrientationActivity" />
     </application>
 

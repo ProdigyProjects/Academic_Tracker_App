@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".katiana.materialMarketplace.MaterialPageView"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+
+        <!-- Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/materialImage"
+            android:layout_width="131dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBelowImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/materialImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/materialTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Material Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/materialDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is the material description."
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Faculty or Subject -->
+            <TextView
+                android:id="@+id/materialFaculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty: Science"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/materialPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: R10"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Rating Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate this material:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RatingBar
+                android:id="@+id/materialRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- File Download Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Download File"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/primaryColor"
+                android:text="Download"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -13,22 +13,23 @@
         android:padding="20dp">
 
         <!-- Profile Picture -->
-        <ImageView
+
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="131dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
-            android:layout_marginTop="4dp"
             android:background="@drawable/circular_background"
             android:scaleType="centerCrop"
             android:src="@drawable/profile_placeholder"
+            app:strokeColor="@color/white"
+            app:strokeWidth="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Full Name -->
-
         <TextView
             android:id="@+id/fullNameLabel"
             android:layout_width="wrap_content"
@@ -43,13 +44,17 @@
         <EditText
             android:id="@+id/fullNameInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:autofillHints="name"
             android:inputType="textPersonName"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@id/fullNameLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             android:layout_marginTop="8dp" />
 
         <!-- Email -->
@@ -66,9 +71,14 @@
         <EditText
             android:id="@+id/emailInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:autofillHints="emailAddress"
             android:inputType="textEmailAddress"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@id/emailLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,9 +98,14 @@
         <EditText
             android:id="@+id/institutionNameInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:autofillHints="organizationName"
             android:inputType="text"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@id/institutionNameLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -110,9 +125,14 @@
         <EditText
             android:id="@+id/qualificationInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:autofillHints="qualifications"
             android:inputType="text"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@id/qualificationLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -132,9 +152,14 @@
         <EditText
             android:id="@+id/passwordInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:autofillHints="password"
             android:inputType="textPassword"
+            android:layout_height="45dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintTop_toBottomOf="@id/passwordLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -169,6 +194,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerButton" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@android:color/white"
+            android:clickable="true"
+            app:srcCompat="@drawable/camera_upload_photo"
+            android:scaleType="center"
+            android:contentDescription="@string/todo"
+            android:focusable="true"
+            android:src="@drawable/camera_upload_photo"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+            app:layout_constraintEnd_toEndOf="@+id/profileImage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
