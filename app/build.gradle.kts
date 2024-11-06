@@ -40,7 +40,14 @@ android {
 }
 
 dependencies {
+    // Firebase BOM to control Firebase library versions
+    implementation(platform("com.google.firebase:firebase-bom:32.0.0")) // Check for the latest version
 
+    // Firebase dependencies without version numbers
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+
+    // Existing dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,8 +56,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
-    implementation(libs.firebase.auth)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.github.yukuku:ambilwarna:2.0.1")  // Color picker dependency
 }

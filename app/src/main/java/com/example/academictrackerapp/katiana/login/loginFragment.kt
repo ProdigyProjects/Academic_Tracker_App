@@ -1,5 +1,6 @@
 package com.example.academictrackerapp.katiana.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
 import com.example.academictrackerapp.MainActivity
 import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.FragmentLoginBinding
@@ -39,7 +41,8 @@ class LoginFragment : Fragment() {
                 MainActivity.auth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener {
                         if(it.isSuccessful) {
-                            findNavController().navigate(R.id.action_loginFragment_to_DashboardFragment)
+                            val intent = Intent(requireActivity(), TimetableActivity::class.java)
+                            startActivity(intent)
                         }
                     }.addOnFailureListener {
                         Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()

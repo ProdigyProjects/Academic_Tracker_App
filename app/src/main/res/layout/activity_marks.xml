@@ -1,0 +1,33 @@
+<!-- activity_marks.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Subject"/>
+
+    <EditText
+        android:id="@+id/editTextMarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Marks"/>
+
+    <Button
+        android:id="@+id/buttonSaveMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Marks"/>
+
+    <Button
+        android:id="@+id/buttonViewMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Marks"/>
+
+</LinearLayout>
