@@ -13,6 +13,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.NotificationManagerCompat
@@ -20,6 +22,7 @@ import androidx.fragment.app.Fragment
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
+import com.example.academictrackerapp.MainActivity
 import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.FragmentNotificationsBinding
 import com.example.academictrackerapp.databinding.ReminderDialogBinding
@@ -35,18 +38,24 @@ class NotificationsFragment : Fragment() {
 
     private lateinit var binding: FragmentNotificationsBinding
     private lateinit var firestore: FirebaseFirestore
+    private val userId = MainActivity.auth.currentUser?.uid
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentNotificationsBinding.inflate(inflater, container, false)
-        firestore = FirebaseFirestore.getInstance() // Initialize Firestore
+        firestore = FirebaseFirestore.getInstance()
 
         binding.addReminder.setOnClickListener {
-            addReminder()
+            if (userId != null) {
+                addReminder()
+            } else {
+                Toast.makeText(requireContext(), "You must be logged in to add reminders", Toast.LENGTH_SHORT).show()
+            }
         }
 
+        showCreatedNotifications()
         return binding.root
     }
 
@@ -86,7 +95,6 @@ class NotificationsFragment : Fragment() {
             DatePickerDialog(requireContext(), { _, year, month, dayOfMonth ->
                 TimePickerDialog(requireContext(), { _, hourOfDay, minute ->
                     pickedDate.set(year, month, dayOfMonth, hourOfDay, minute)
-                    Log.d("Date And Time", "Picked Date and Time $pickedDate")
                     dialogBinding.pickedDateAndTime.text = getCurrentDateAndTime(pickedDate.timeInMillis)
                 }, hour, minute, false).show()
             }, year, month, day).show()
@@ -105,17 +113,17 @@ class NotificationsFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                // Save reminder to Firestore
                 saveReminderToFirestore(
                     dialogBinding.etTitle.text.toString(),
                     requireContext().resources.getStringArray(R.array.ReminderTypes)[dialogBinding.remindertype.selectedItemPosition],
                     pickedDate.timeInMillis
                 )
 
-                // WorkManager setup
-                createWorkRequest(dialogBinding.etTitle.text.toString(),
+                createWorkRequest(
+                    dialogBinding.etTitle.text.toString(),
                     requireContext().resources.getStringArray(R.array.ReminderTypes)[dialogBinding.remindertype.selectedItemPosition],
-                    timeDelayInSeconds)
+                    timeDelayInSeconds
+                )
 
                 Toast.makeText(requireContext(), "Reminder Added", Toast.LENGTH_LONG).show()
                 dialog.dismiss()
@@ -140,10 +148,11 @@ class NotificationsFragment : Fragment() {
             "title" to title,
             "reminderType" to reminderType,
             "timestamp" to timestamp,
-            "createdAt" to System.currentTimeMillis()
+            "createdAt" to System.currentTimeMillis(),
+            "userId" to userId
         )
 
-        firestore.collection("reminders") //table name
+        firestore.collection("reminders")
             .add(reminder)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "Reminder saved to Firestore", Toast.LENGTH_SHORT).show()
@@ -191,5 +200,43 @@ class NotificationsFragment : Fragment() {
             }
             .setNegativeButton("Cancel", null)
             .show()
+    }
+
+    private fun showCreatedNotifications() {
+        val container = binding.remindersContainer
+
+        firestore.collection("reminders")
+            .whereEqualTo("userId", userId)
+            .get()
+            .addOnSuccessListener { documents ->
+                container.removeAllViews()
+                for (document in documents) {
+                    val reminderLayout = LayoutInflater.from(context).inflate(R.layout.reminder_item, container, false)
+
+
+                    val reminderName = reminderLayout.findViewById<EditText>(R.id.reminderNameEditText)
+                    val reminderDate = reminderLayout.findViewById<EditText>(R.id.reminderDateEditText)
+                    val deleteButton = reminderLayout.findViewById<ImageButton>(R.id.imageButton4)
+
+                    reminderName.setText(document.getString("title"))
+                    reminderDate.setText(SimpleDateFormat("dd-MM-yyyy hh:mm a", Locale.getDefault()).format(Date(document.getLong("timestamp") ?: 0L)))
+
+                    deleteButton.setOnClickListener {
+                        document.reference.delete()
+                            .addOnSuccessListener {
+                                container.removeView(reminderLayout)
+                                Toast.makeText(context, "Reminder deleted", Toast.LENGTH_SHORT).show()
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(context, "Failed to delete reminder: ${e.message}", Toast.LENGTH_LONG).show()
+                            }
+                    }
+
+                    container.addView(reminderLayout)
+                }
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(context, "Failed to load reminders: ${e.message}", Toast.LENGTH_LONG).show()
+            }
     }
 }

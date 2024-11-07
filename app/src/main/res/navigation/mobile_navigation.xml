@@ -26,13 +26,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications_add_reminder"
-        android:name="com.example.academictrackerapp.elvis.notifications.NotificationsSetup"
-        android:label="Notifications"
-        tools:layout="@layout/fragment_notifications_setup">
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_registration"
         android:name="com.example.academictrackerapp.katiana.registration.RegistrationFragment"
         android:label="@string/title_registration"
