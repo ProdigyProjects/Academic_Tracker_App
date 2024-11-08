@@ -18,7 +18,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Add Reminder"
-            android:textColor="@color/black"
+            android:textColor="@color/primaryColor"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -33,7 +33,7 @@
             android:textColorHint="@color/black"
             app:startIconContentDescription="Edit Note Icon"
             app:startIconDrawable="@drawable/baseline_edit_note_24"
-            app:startIconTint="@color/black">
+            app:startIconTint="@color/primaryColor">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTitle"
@@ -95,7 +95,7 @@
                 android:id="@+id/selectButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
+                android:background="@color/primaryColor"
                 android:gravity="center"
                 android:paddingStart="30dp"
                 android:paddingTop="10dp"
@@ -115,7 +115,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/rounded_border"
             android:text="Add Reminder"
-            app:backgroundTint="@color/black" />
+            app:backgroundTint="@color/primaryColor" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/canceButton"
@@ -125,7 +125,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/rounded_border"
             android:text="Cancel"
-            app:backgroundTint="@color/black" />
+            app:backgroundTint="@color/primaryColor" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
