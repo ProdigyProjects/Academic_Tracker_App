@@ -7,16 +7,6 @@
     android:background="@android:color/white">
 
     <!-- Back Button as ImageView -->
-    <ImageView
-        android:id="@+id/image_back"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/back"
-        android:layout_gravity="top|start"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="but" />
 
     <!-- Add ID to TableLayout -->
     <TableLayout
@@ -27,13 +17,14 @@
 
         <!-- Table Header (Days of the Week) -->
         <TableRow>
+
             <TextView
-                android:layout_width="80dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:text="Time"
-                android:gravity="center"
                 android:background="#f2f2f2"
+                android:gravity="center"
                 android:padding="8dp"
+                android:text="Time"
                 android:textStyle="bold" />
 
             <TextView
@@ -43,7 +34,7 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="6dp"
-                android:text="Sunday"
+                android:text="Sun"
                 android:textStyle="bold" />
 
             <TextView
@@ -53,7 +44,7 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="6dp"
-                android:text="Monday"
+                android:text="Mon"
                 android:textStyle="bold" />
 
             <TextView
@@ -63,14 +54,14 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="Tuesday"
+                android:text="Tue"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Wednesday"
+                android:text="Wed"
                 android:gravity="center"
                 android:background="@drawable/timetable_box"
                 android:padding="7dp"
@@ -83,7 +74,7 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="Thursday"
+                android:text="Thu"
                 android:textStyle="bold" />
 
             <TextView
@@ -93,7 +84,7 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="Friday"
+                android:text="Fri"
                 android:textStyle="bold" />
 
             <TextView
@@ -103,7 +94,7 @@
                 android:background="@drawable/timetable_box"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="Saturday"
+                android:text="Sat"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -111,7 +102,7 @@
         <!-- Add time slots here... -->
         <TableRow>
             <TextView
-                android:layout_width="80dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="08:00"
                 android:gravity="center"
@@ -173,7 +164,7 @@
         <!-- Repeat for other time slots -->
         <TableRow>
             <TextView
-                android:layout_width="80dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="08:30"
                 android:gravity="center"
@@ -230,11 +221,10 @@
                 android:padding="8dp" />
         </TableRow>
 
-
         <!-- Repeat for other time slots -->
         <TableRow>
             <TextView
-                android:layout_width="80dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:text="09:00"
                 android:gravity="center"
@@ -293,6 +283,750 @@
 
         </TableRow>
 
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="09:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="10:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="10:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="11:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="11:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="12:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="12:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="13:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="13:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="14:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="14:30"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
+
+        <!-- Repeat for other time slots -->
+        <TableRow>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="15:00"
+                android:gravity="center"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/timetable_box"
+                android:padding="8dp" />
+
+
+        </TableRow>
 
         <!-- Add your Add Task Button -->
         <Button

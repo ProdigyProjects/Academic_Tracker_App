@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Imraan.grade
+package com.example.academictrackerapp.imraan.grade
 
 // MarksActivity.kt
 

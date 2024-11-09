@@ -88,8 +88,6 @@
             android:focusable="true"
             android:gravity="center"
             android:text="@string/dont_have_account"
-            android:textColor="@color/black"
-            android:textColorLink="@android:color/holo_blue_dark"
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"

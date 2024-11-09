@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Imraan.TimeTable
+package com.example.academictrackerapp.imraan.timeTable
 
 import android.app.Activity
 import android.content.Intent
@@ -24,7 +24,7 @@ class TimetableActivity : AppCompatActivity() {
         tableLayout = findViewById(R.id.tableLayout)
 
         // Back button functionality
-        findViewById<ImageView>(R.id.image_back).setOnClickListener { finish() }
+        //findViewById<ImageView>(R.id.image_back).setOnClickListener { finish() }
 
         // Load tasks from Firestore
         loadTasks()

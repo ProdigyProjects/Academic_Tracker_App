@@ -26,10 +26,10 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications_add_reminder"
+        android:id="@+id/navigation_notifications_add_reminder2"
         android:name="com.example.academictrackerapp.elvis.notifications.NotificationsSetup"
         android:label="Notifications"
-        tools:layout="@layout/fragment_notifications_setup">
+        tools:layout="@layout/reminder_dialog">
     </fragment>
 
     <fragment
@@ -105,13 +105,31 @@
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
         <action
             android:id="@+id/toTimetable"
-            app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_timetable" /> <!-- change to your fragment name-->
         <action
             android:id="@+id/toGrade"
-            app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_marks" /> <!-- change to your fragment name-->
         <action
             android:id="@+id/toLMS"
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_timetable"
+        android:label="Dashboard"
+        tools:layout="@layout/activity_timetable">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_marks"
+        android:label="Dashboard"
+        tools:layout="@layout/activity_marks">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_support"
+        android:label="Dashboard"
+        tools:layout="@layout/activity_support">
     </fragment>
 
     <fragment

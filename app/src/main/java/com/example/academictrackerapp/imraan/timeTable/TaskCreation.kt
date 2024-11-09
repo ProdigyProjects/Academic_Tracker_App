@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.Imraan.TimeTable
+package com.example.academictrackerapp.imraan.timeTable
 
 import android.app.Activity
 import android.content.Intent
