@@ -1,0 +1,10 @@
+<!-- item_mark.xml -->
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mark_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textSize="18sp"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center" />

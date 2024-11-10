@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
@@ -24,19 +25,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".katiana.login.LoginFragment"
+        <activity
+            android:name=".katiana.login.LoginFragment"
             android:exported="false"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.registration.RegistrationFragment"
+        <activity
+            android:name=".katiana.registration.RegistrationFragment"
             android:exported="false"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".katiana.LinkPages"
             android:exported="false"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".katiana.userProfile.UserProfileFragment"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.progressTracking.ProgressTracking"
             android:exported="false"
             tools:ignore="LockedOrientationActivity" />
         <activity android:name=".katiana.materialMarketplace.MaterialMarketplace"

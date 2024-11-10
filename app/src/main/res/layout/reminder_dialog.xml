@@ -8,7 +8,7 @@
     android:layout_margin="10dp">
 
     <LinearLayout
-        android:layout_width="376dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -59,9 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-
             android:layout_marginBottom="10dp">
-
 
             <Spinner
                 android:id="@+id/remindertype"
@@ -112,8 +110,8 @@
             android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_border"
             android:text="Add Reminder"
             app:backgroundTint="@color/primaryColor" />
 
@@ -123,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_border"
+            android:padding="15dp"
             android:text="Cancel"
             app:backgroundTint="@color/primaryColor" />
     </LinearLayout>
