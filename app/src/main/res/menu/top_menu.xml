@@ -13,7 +13,7 @@
         app:showAsAction="never">
     </item>
     <item
-        android:id="@+id/navigation_marketplace"
+        android:id="@+id/navigation_logOut"
         android:title="@string/log_out"
         app:showAsAction="never">
     </item>

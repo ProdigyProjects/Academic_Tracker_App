@@ -15,7 +15,7 @@
     <color name="soft_yellow">#FFD700</color>
     <color name="coral">#FF7F50</color>
     <color name="lavender">#E6E6FA</color>    <!-- Neutral Colors -->
-    <color name="light_gray">#F5F5F5</color>
+    <color name="light_gray">#d0d0d0</color>
     <color name="grey">#F5F5F5</color>
     <color name="charcoal">#333333</color>    <!-- Additional Colors for States -->
     <color name="success">#4CAF50</color> <!-- For successful actions -->
