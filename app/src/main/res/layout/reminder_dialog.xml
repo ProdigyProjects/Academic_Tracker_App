@@ -18,7 +18,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Add Reminder"
-            android:textColor="@color/black"
+            android:textColor="@color/primaryColor"
             android:textSize="22sp"
             android:textStyle="bold" />
 
