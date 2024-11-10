@@ -16,12 +16,12 @@ import androidx.work.Data
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
-import com.example.academictrackerapp.databinding.FragmentNotificationsBinding
-import com.example.academictrackerapp.databinding.ReminderDialogBinding
-import com.google.firebase.firestore.FirebaseFirestore
 import com.example.academictrackerapp.MainActivity
 import com.example.academictrackerapp.R
+import com.example.academictrackerapp.databinding.FragmentNotificationsBinding
+import com.example.academictrackerapp.databinding.ReminderDialogBinding
 import com.example.academictrackerapp.elvis.data.Reminder
+import com.google.firebase.firestore.FirebaseFirestore
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -57,6 +57,7 @@ class NotificationsFragment : Fragment() {
         showCreatedNotifications()
         return binding.root
     }
+
 
     private fun addReminderDialog() {
         val dialogBinding = ReminderDialogBinding.inflate(layoutInflater)
@@ -136,11 +137,21 @@ class NotificationsFragment : Fragment() {
                     remindersList.add(reminder)
                 }
                 adapter.notifyDataSetChanged()
+
+                // Toggle visibility based on whether there are reminders
+                if (remindersList.isEmpty()) {
+                    binding.emptyMessage.visibility = View.VISIBLE
+                    binding.remindersRecyclerView.visibility = View.GONE
+                } else {
+                    binding.emptyMessage.visibility = View.GONE
+                    binding.remindersRecyclerView.visibility = View.VISIBLE
+                }
             }
             .addOnFailureListener { e ->
                 Toast.makeText(context, "Failed to load reminders: ${e.message}", Toast.LENGTH_LONG).show()
             }
     }
+
 
     private fun scheduleReminderNotification(title: String, timestamp: Long) {
         val delay = timestamp - System.currentTimeMillis()
