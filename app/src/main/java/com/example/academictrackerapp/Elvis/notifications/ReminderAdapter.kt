@@ -1,5 +1,6 @@
 package com.example.academictrackerapp.elvis.notifications
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -12,7 +13,7 @@ import java.util.Date
 import java.util.Locale
 
 class ReminderAdapter(
-    private val reminders: List<Reminder>,
+    private val reminders: MutableList<Reminder>,
     private val firestore: FirebaseFirestore
 ) : RecyclerView.Adapter<ReminderAdapter.ReminderViewHolder>() {
 
@@ -23,17 +24,30 @@ class ReminderAdapter(
                 SimpleDateFormat("dd-MM-yyyy hh:mm a", Locale.getDefault()).format(Date(reminder.timestamp))
             )
 
-            // Delete button functionality
+            // Delete button functionality with alert dialog confirmation
             binding.imageButton4.setOnClickListener {
-                firestore.collection("reminders").document(reminder.id)
-                    .delete()
-                    .addOnSuccessListener {
-                        Toast.makeText(binding.root.context, "Reminder deleted", Toast.LENGTH_SHORT).show()
-                        notifyItemRemoved(adapterPosition)
+                AlertDialog.Builder(binding.root.context)
+                    .setTitle("Delete Reminder")
+                    .setMessage("Are you sure you want to delete this reminder?")
+                    .setPositiveButton("Delete") { dialog, _ ->
+                        firestore.collection("reminders").document(reminder.id)
+                            .delete()
+                            .addOnSuccessListener {
+                                Toast.makeText(binding.root.context, "Reminder deleted", Toast.LENGTH_SHORT).show()
+                                // Remove the item from the mutable list and notify the adapter
+                                val position = adapterPosition
+                                reminders.removeAt(position)
+                                notifyItemRemoved(position)
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(binding.root.context, "Failed to delete reminder: ${e.message}", Toast.LENGTH_LONG).show()
+                            }
+                        dialog.dismiss()
                     }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(binding.root.context, "Failed to delete reminder: ${e.message}", Toast.LENGTH_LONG).show()
+                    .setNegativeButton("Cancel") { dialog, _ ->
+                        dialog.dismiss()
                     }
+                    .show()
             }
         }
     }
