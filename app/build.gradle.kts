@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.auth)
     implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
