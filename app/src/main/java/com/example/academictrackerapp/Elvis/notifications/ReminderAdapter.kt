@@ -13,7 +13,7 @@ import java.util.Date
 import java.util.Locale
 
 class ReminderAdapter(
-    private val reminders: MutableList<Reminder>, // Change to MutableList
+    private val reminders: MutableList<Reminder>,
     private val firestore: FirebaseFirestore
 ) : RecyclerView.Adapter<ReminderAdapter.ReminderViewHolder>() {
 

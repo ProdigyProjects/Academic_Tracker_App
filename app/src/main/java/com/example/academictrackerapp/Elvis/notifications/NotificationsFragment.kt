@@ -58,7 +58,6 @@ class NotificationsFragment : Fragment() {
         return binding.root
     }
 
-
     private fun addReminderDialog() {
         val dialogBinding = ReminderDialogBinding.inflate(layoutInflater)
         val dialog = AlertDialog.Builder(requireContext())
@@ -151,7 +150,6 @@ class NotificationsFragment : Fragment() {
                 Toast.makeText(context, "Failed to load reminders: ${e.message}", Toast.LENGTH_LONG).show()
             }
     }
-
 
     private fun scheduleReminderNotification(title: String, timestamp: Long) {
         val delay = timestamp - System.currentTimeMillis()

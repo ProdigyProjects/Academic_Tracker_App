@@ -55,7 +55,6 @@
             android:layout_height="wrap_content"
             android:text="Available Flashcards"
             android:textSize="18sp"
-            android:textColor="@color/black"
             android:layout_marginTop="16dp"/>
 
         <androidx.cardview.widget.CardView
@@ -243,8 +242,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
             android:orientation="vertical"
-            android:background="@android:color/white">
+            android:layout_marginTop="10dp">
 
             <!-- Header with title and "View All" button -->
             <LinearLayout

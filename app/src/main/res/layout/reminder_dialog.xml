@@ -18,7 +18,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Add Reminder"
-            android:textColor="@color/primaryColor"
+            android:textColor="?attr/colorPrimary"
             android:textSize="22sp"
             android:textStyle="bold" />
 
@@ -39,7 +39,8 @@
                 android:id="@+id/etTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="?attr/colorOnBackground"
+                android:textColor="?attr/colorOnSecondary"
                 android:paddingStart="50dp"
                 android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -51,7 +52,7 @@
             android:layout_margin="10dp"
             android:padding="10dp"
             android:text="Reminder Type"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:textSize="18sp" />
 
 
@@ -65,9 +66,10 @@
                 android:id="@+id/remindertype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/rounded_border"
-                android:padding="10dp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/edit_text_background"
+                android:paddingStart="10dp" />
         </RelativeLayout>
 
 
@@ -75,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/rounded_border"
+            android:background="@drawable/edit_text_background"
             android:orientation="horizontal"
             android:padding="4dp">
 
@@ -86,21 +88,21 @@
                 android:layout_marginStart="10dp"
                 android:layout_weight="1"
                 android:text="date and time"
-                android:textColor="@color/black"
+                android:textColor="?attr/colorOnSecondary"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/selectButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/primaryColor"
+                android:background="?attr/colorPrimary"
                 android:gravity="center"
                 android:paddingStart="30dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="30dp"
                 android:paddingBottom="10dp"
                 android:text="Select"
-                android:textColor="@color/white"
+                android:textColor="?attr/colorOnPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -113,7 +115,7 @@
             android:padding="15dp"
             android:layout_margin="10dp"
             android:text="Add Reminder"
-            app:backgroundTint="@color/primaryColor" />
+            app:backgroundTint="?attr/colorPrimary"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/canceButton"
@@ -123,7 +125,7 @@
             android:layout_margin="10dp"
             android:padding="15dp"
             android:text="Cancel"
-            app:backgroundTint="@color/primaryColor" />
+            app:backgroundTint="?attr/colorPrimary" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
