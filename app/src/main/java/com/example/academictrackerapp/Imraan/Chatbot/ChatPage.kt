@@ -1,4 +1,4 @@
-package np.com.Imraan.easybot
+package com.example.academictrackerapp.Imraan.Chatbot
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -33,9 +33,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import np.com.Imraan.easybot.ui.theme.ColorModelMessage
-import np.com.Imraan.easybot.ui.theme.ColorUserMessage
-import np.com.Imraan.easybot.ui.theme.Purple80
+
+
+import com.example.academictrackerapp.R
+
+import com.example.academictrackerapp.Imraan.ui.theme.ColorModelMessage
+import com.example.academictrackerapp.Imraan.ui.theme.ColorUserMessage
+import com.example.academictrackerapp.Imraan.ui.theme.Purple80
+
+
+
+
 
 @Composable
 fun ChatPage(modifier: Modifier = Modifier,viewModel: ChatViewModel) {
@@ -171,7 +179,7 @@ fun AppHeader() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.primary)
+            .background(Color(0xFFE83256))
     ) {
         Text(
             modifier = Modifier.padding(16.dp),

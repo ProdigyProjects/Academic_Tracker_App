@@ -1,4 +1,4 @@
-package np.com.Imraan.easybot
+package com.example.academictrackerapp.Imraan.Chatbot
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -9,10 +9,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.ViewModelProvider
-import np.com.Imraan.easybot.ui.theme.EasyBotTheme
+import com.example.academictrackerapp.Imraan.ui.theme.EasyBotTheme
 
 
-class MainActivity : ComponentActivity() {
+
+class MainChatBotctivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

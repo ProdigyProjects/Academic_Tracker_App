@@ -1,4 +1,4 @@
-package np.com.Imraan.easybot
+package com.example.academictrackerapp.Imraan.Chatbot
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel

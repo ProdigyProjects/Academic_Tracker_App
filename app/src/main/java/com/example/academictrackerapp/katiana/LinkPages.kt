@@ -1,13 +1,18 @@
 package com.example.academictrackerapp.katiana
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.academictrackerapp.Imraan.Chatbot.ChatViewModel
 import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.LinkToPagesBinding
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
+
+import com.example.academictrackerapp.Imraan.Chatbot.MainChatBotctivity  // Import your MainChatBotActivity
 
 class LinkPages : Fragment() {
 
@@ -45,6 +50,18 @@ class LinkPages : Fragment() {
 
         binding.marketplace.setOnClickListener {
             findNavController().navigate(R.id.toMarketplace)
+        }
+
+        // Set up the timetable button to start TimetableActivity
+        binding.timetable.setOnClickListener {
+            val intent = Intent(requireContext(), TimetableActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Set up the chatbot button to navigate to MainChatBotActivity
+        binding.chatbotButton.setOnClickListener {
+            val intent = Intent(requireContext(), MainChatBotctivity::class.java)
+            startActivity(intent)
         }
 
         return root

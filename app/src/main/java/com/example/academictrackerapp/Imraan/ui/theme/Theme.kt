@@ -1,4 +1,4 @@
-package np.com.Imraan.easybot.ui.theme
+package com.example.academictrackerapp.Imraan.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,12 @@
         android:theme="@style/Theme.AcademicTrackerApp"
         tools:targetApi="31">
         <activity
+            android:name=".Imraan.grade.MarksListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Imraan.grade.MarksActivity"
+            android:exported="false" /> <!-- MAIN entry point activity -->
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,25 +30,44 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity> <!-- TimetableActivity should be exported to allow it to be launched from other activities -->
+        <activity
+            android:name=".Imraan.TimeTable.TimetableActivity"
+            android:exported="true" /> <!-- Corrected reference to TaskCreationActivity -->
+        <activity
+            android:name=".Imraan.TimeTable.TaskCreationActivity"
+            android:exported="true" /> <!-- Other activities remain unchanged -->
+        <activity
+            android:name=".katiana.login.LoginFragment"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".katiana.registration.RegistrationFragment"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".katiana.LinkPages"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".katiana.userProfile.UserProfileFragment"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".katiana.progressTracking.ProgressTracking"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".katiana.materialMarketplace.MaterialMarketplace"
+            android:exported="false"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Imraan.Chatbot.MainChatBotctivity"
+            android:label="ChatBot"
+            android:theme="@style/Theme.AcademicTrackerApp">
+
+            <!-- Optional: Set launch mode or other settings -->
         </activity>
-        <activity android:name=".katiana.login.LoginFragment"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.registration.RegistrationFragment"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.LinkPages"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.userProfile.UserProfileFragment"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.progressTracking.ProgressTracking"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity android:name=".katiana.materialMarketplace.MaterialMarketplace"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
     </application>
 
 </manifest>

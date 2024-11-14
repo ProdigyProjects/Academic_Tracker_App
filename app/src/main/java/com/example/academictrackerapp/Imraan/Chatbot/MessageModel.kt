@@ -1,4 +1,4 @@
-package np.com.Imraan.easybot
+package com.example.academictrackerapp.Imraan.Chatbot
 
 data class MessageModel(
     val message : String,

@@ -1,4 +1,5 @@
 package com.example.academictrackerapp.Imraan.TimeTable
 
-class Timetable {
-}
+data class Timetable(
+    val tasks: Map<Any, Any> = emptyMap() // Day -> (Time -> Task)
+)

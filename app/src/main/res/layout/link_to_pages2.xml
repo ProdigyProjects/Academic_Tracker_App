@@ -7,37 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".katiana.LinkPages2">
 
-    <Button
-        android:id="@+id/chatBoot"
-        android:layout_width="263dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/primaryColor"
-        android:text="ChatBoot"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
 
-    <Button
-        android:id="@+id/timetable"
-        android:layout_width="263dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/primaryColor"
-        android:text="Timetable"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
 
     <Button
         android:id="@+id/grade"

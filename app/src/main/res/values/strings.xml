@@ -66,5 +66,7 @@
     <string name="main_features">Main Features</string>
     <string name="additional_features">Additional Features</string>
     <string name="log_out">Log Out</string>
+    <string name="timetable" />
+
     <!-- ==========================     Elvis Stuff ends    ==========================-->
 </resources>

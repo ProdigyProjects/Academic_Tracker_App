@@ -151,4 +151,21 @@
         android:label="Material Selected"
         tools:layout="@layout/material_page_view">
     </fragment>
+
+    <fragment
+        android:id="@+id/materialMarketplace"
+        android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialMarketplace"
+        android:label="Material Marketplace"
+        tools:layout="@layout/fragment_material_marketplace" />
+
+    <fragment
+        android:id="@+id/materialPageView"
+        android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialPageView"
+        android:label="Material Page View"
+        tools:layout="@layout/material_page_view" />
+
+    <action
+        android:id="@+id/toMaterialPageView"
+        app:destination="@id/materialPageView" />
+
 </navigation>
