@@ -58,12 +58,14 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.firebase.auth)
     implementation("androidx.work:work-runtime-ktx:2.7.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
     implementation(libs.firebase.firestore)
     implementation(libs.androidx.activity)
     implementation(libs.firebase.storage.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.github.yukuku:ambilwarna:2.0.1")  // Color picker dependency
     implementation("com.github.yukuku:ambilwarna:2.0.1")
     implementation("com.google.ai.client.generativeai:generativeai:0.4.0")
 

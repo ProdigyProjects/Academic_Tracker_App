@@ -30,16 +30,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- TimetableActivity should be exported to allow it to be launched from other activities -->
-        <activity
-            android:name=".Imraan.TimeTable.TimetableActivity"
-            android:exported="true" /> <!-- Corrected reference to TaskCreationActivity -->
-        <activity
-            android:name=".Imraan.TimeTable.TaskCreationActivity"
-            android:exported="true" /> <!-- Other activities remain unchanged -->
+        </activity>
         <activity
             android:name=".katiana.login.LoginFragment"
             android:exported="false"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".katiana.registration.RegistrationFragment"
@@ -51,10 +46,6 @@
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".katiana.userProfile.UserProfileFragment"
-            android:exported="false"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".katiana.progressTracking.ProgressTracking"
             android:exported="false"
             tools:ignore="LockedOrientationActivity" />
         <activity

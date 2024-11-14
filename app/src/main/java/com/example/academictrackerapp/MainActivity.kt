@@ -34,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment_activity_main)
         val navView: BottomNavigationView = binding.navView
 
+        if (auth.currentUser != null) {
+            // Navigate to the main fragment or home page if user is logged in
+            navController.navigate(R.id.navigation_home)
+        } else {
+            // Otherwise, navigate to the login screen
+            navController.navigate(R.id.navigation_welcome)
+        }
+
         // Set multiple destinations as top-level to exclude the back arrow on these pages
         val appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -108,6 +116,14 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_link_to_pages2 -> {
                 // Navigate to the Material Marketplace screen
                 navController.navigate(R.id.navigation_link_to_pages2)
+                return true
+            }
+            R.id.navigation_logOut -> {
+                // Log the user out of Firebase
+                FirebaseAuth.getInstance().signOut()
+
+                // Navigate to the welcome screen
+                navController.navigate(R.id.navigation_welcome)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

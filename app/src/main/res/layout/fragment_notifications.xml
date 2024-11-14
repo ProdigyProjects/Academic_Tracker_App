@@ -8,262 +8,47 @@
     android:layout_marginBottom="58dp"
     tools:context=".elvis.notifications.NotificationsFragment">
 
-    <LinearLayout
-        android:layout_width="306dp"
-        android:layout_height="518dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/white"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
+    <Button
+        android:id="@+id/addReminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Add Reminder"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:textSize="16sp"/>
 
-        <Button
-            android:id="@+id/addReminder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/white"
-            android:text="Add Reminder"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+    <!-- Placeholder message when there are no reminders -->
+    <TextView
+        android:id="@+id/emptyMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No reminders yet! Add one to stay organized."
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/addReminder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/darker_gray"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:baselineAligned="false"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
-
-                <EditText
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Reminder name"
-                    android:background="@android:color/transparent"
-                    android:hint="@string/study_english"
-                    android:inputType="text"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:autofillHints="Date"
-                    android:background="@android:color/transparent"
-                    android:hint="@string/date"
-                    android:inputType="text"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-
-
-                <ImageButton
-                    android:id="@+id/imageButton4"
-                    android:layout_width="60dp"
-                    android:layout_height="48dp"
-                    android:background="@android:color/transparent"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/delete_button"
-                    android:src="@android:drawable/ic_menu_delete" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Reminder name"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/study_maths"
-                        android:inputType="text"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Date"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/_23_may_2024_02_00pm"
-                        android:inputType="text"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-
-
-                    <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:background="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/delete_button"
-                        android:src="@android:drawable/ic_menu_delete" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Reminder name"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/study_maths"
-                        android:inputType="text"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Date"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/_23_may_2024_02_00pm"
-                        android:inputType="text"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-
-
-                    <ImageButton
-                        android:id="@+id/imageButton8"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:background="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/delete_button"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:baselineAligned="false"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Reminder name"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/study_maths"
-                        android:inputType="text"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:autofillHints="Date"
-                        android:background="@android:color/transparent"
-                        android:hint="@string/_23_may_2024_02_00pm"
-                        android:inputType="text"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <ImageButton
-                        android:id="@+id/imageButton10"
-                        android:layout_width="60dp"
-                        android:layout_height="48dp"
-                        android:background="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:contentDescription="@string/delete_button"
-                        android:src="@android:drawable/ic_menu_delete" />
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-    </LinearLayout>
+    <!-- RecyclerView for reminders list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/remindersRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/addReminder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
