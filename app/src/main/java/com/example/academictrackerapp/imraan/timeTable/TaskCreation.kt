@@ -1,5 +1,6 @@
-package com.example.academictrackerapp.imraan.timeTable
+package com.example.academictrackerapp.Imraan.TimeTable
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
@@ -10,9 +11,7 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.academictrackerapp.R // Ensure this import works
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.academictrackerapp.R
 import yuku.ambilwarna.AmbilWarnaDialog // Import for AmbilWarna
 
 class TaskCreationActivity : AppCompatActivity() {
@@ -22,24 +21,25 @@ class TaskCreationActivity : AppCompatActivity() {
     private var selectedColor = Color.RED // Default selected color
     private lateinit var colorButton: Button // Button to select color
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_task_creation) // Ensure this layout exists
+        setContentView(R.layout.activity_task_creation)
 
-        // Initialize views with the correct IDs from your XML layout
-        taskName = findViewById(R.id.task_name) // Matches the EditText ID in XML
-        daySpinner = findViewById(R.id.day_spinner) // Matches the Spinner ID for day selection
-        timeSpinner = findViewById(R.id.time_spinner) // Matches the Spinner ID for time selection
-        val submitTaskButton: Button = findViewById(R.id.submit_task_button) // Matches the Submit button ID
-        colorButton = findViewById(R.id.color_button) // Matches the Color button ID
+        // Initialize views
+        taskName = findViewById(R.id.task_name)
+        daySpinner = findViewById(R.id.day_spinner) // Spinner for day selection
+        timeSpinner = findViewById(R.id.time_spinner) // Spinner for time selection
+        val submitTaskButton: Button = findViewById(R.id.submit_task_button)
+        colorButton = findViewById(R.id.color_button) // Button for color selection
 
-        // Set up the day spinner
+        // Set up the day
         val days = arrayOf("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
         val dayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, days)
         daySpinner.adapter = dayAdapter
 
-        // Set up the time spinner
-        val times = arrayOf("08:00", "08:30", "09:00", "09:30", "10:00") // Add more times as needed
+        // Set up the time
+        val times = arrayOf("08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00","20:00") // Add more times as needed
         val timeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, times)
         timeSpinner.adapter = timeAdapter
 
@@ -55,7 +55,15 @@ class TaskCreationActivity : AppCompatActivity() {
             val time = timeSpinner.selectedItem.toString()
 
             if (task.isNotEmpty()) {
-                saveTaskToFirebase(task, day, time, selectedColor) // Save task to Firebase
+                val resultIntent = Intent()
+                resultIntent.putExtra("task", task)
+                resultIntent.putExtra("day", day)
+                resultIntent.putExtra("time", time)
+                resultIntent.putExtra("color", selectedColor)
+
+                // Set the result to OK and finish the activity
+                setResult(Activity.RESULT_OK, resultIntent)
+                finish() // This returns to the TimetableActivity
             } else {
                 Toast.makeText(this, "Please enter a task name", Toast.LENGTH_SHORT).show()
             }
@@ -74,40 +82,7 @@ class TaskCreationActivity : AppCompatActivity() {
                 // Handle cancel action if needed
             }
         })
+
         colorPickerDialog.show()
-    }
-
-    private fun saveTaskToFirebase(task: String, day: String, time: String, color: Int) {
-        val userId = FirebaseAuth.getInstance().currentUser?.uid // Get the current user's ID
-        if (userId != null) { // Ensure the user is authenticated
-            val db = FirebaseFirestore.getInstance()
-            val taskData = hashMapOf(
-                "task" to task,
-                "day" to day,
-                "time" to time,
-                "color" to color
-            )
-
-            // Save the task under the user's document
-            db.collection("users") // Use the users collection
-                .document(userId) // User-specific document
-                .collection("tasks") // Tasks subcollection
-                .add(taskData)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Task added successfully", Toast.LENGTH_SHORT).show()
-                    val resultIntent = Intent()
-                    resultIntent.putExtra("task", task)
-                    resultIntent.putExtra("day", day)
-                    resultIntent.putExtra("time", time)
-                    resultIntent.putExtra("color", color)
-                    setResult(Activity.RESULT_OK, resultIntent)
-                    finish() // This returns to the TimetableActivity
-                }
-                .addOnFailureListener { e ->
-                    Toast.makeText(this, "Error adding task: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
-        } else {
-            Toast.makeText(this, "User is not authenticated", Toast.LENGTH_SHORT).show()
-        }
     }
 }
