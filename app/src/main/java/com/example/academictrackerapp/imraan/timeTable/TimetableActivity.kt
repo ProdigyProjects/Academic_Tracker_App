@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TableLayout
@@ -11,11 +12,12 @@ import android.widget.TableRow
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.academictrackerapp.Imraan.BaseActivity
 import com.example.academictrackerapp.R
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.auth.FirebaseAuth
 
-class TimetableActivity : AppCompatActivity() {
+class TimetableActivity : BaseActivity() {
     private val db = FirebaseFirestore.getInstance()
     private val userId = FirebaseAuth.getInstance().currentUser?.uid // Get current user ID
     private lateinit var tableLayout: TableLayout
@@ -27,7 +29,7 @@ class TimetableActivity : AppCompatActivity() {
         // Initialize views
         val addTaskButton: Button = findViewById(R.id.add_task_button)
         tableLayout = findViewById(R.id.tableLayout)
-        val backButton: ImageView = findViewById(R.id.image_back)
+        //val backButton: ImageView = findViewById(R.id.image_back)
 
         // Set click listener for Add Task button
         addTaskButton.setOnClickListener {
@@ -36,9 +38,9 @@ class TimetableActivity : AppCompatActivity() {
         }
 
         // Set click listener for back button
-        backButton.setOnClickListener {
+        /*backButton.setOnClickListener {
             finish() // Finish current activity and return to the previous one
-        }
+        }*/
 
         // Load timetable data
         loadTimetableFromFirestore()
@@ -61,6 +63,17 @@ class TimetableActivity : AppCompatActivity() {
         }
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> { // Respond to the action bar’s Up/Home button
+                onBackPressed() // Navigates back
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
     private fun addTaskToTimetable(day: String, time: String, taskName: String, color: Int) {
         val dayIndex = getDayIndex(day)
         val timeIndex = getTimeIndex(time)
@@ -69,10 +82,33 @@ class TimetableActivity : AppCompatActivity() {
             val row = tableLayout.getChildAt(timeIndex + 1) as TableRow
             val cell = row.getChildAt(dayIndex + 1) as TextView
 
-            cell.text = taskName
+            // Set background color only
+            cell.text = ""
             cell.setBackgroundColor(color)
+
+            // Set click listener to display details
+            cell.setOnClickListener {
+                showTaskDetailsDialog(taskName, day, time, color)
+            }
         }
     }
+
+    private fun showTaskDetailsDialog(taskName: String, day: String, time: String, color: Int) {
+        val dialog = android.app.AlertDialog.Builder(this)
+        dialog.setTitle("Task Details")
+        dialog.setMessage(
+            "Task: $taskName\n" +
+                    "Day: $day\n" +
+                    "Time: $time\n" +
+                    "Color: #${Integer.toHexString(color).uppercase()}"
+        )
+        dialog.setPositiveButton("OK") { dialogInterface, _ ->
+            dialogInterface.dismiss()
+        }
+        dialog.create().show()
+    }
+
+
 
     private fun getDayIndex(day: String): Int {
         return when (day) {

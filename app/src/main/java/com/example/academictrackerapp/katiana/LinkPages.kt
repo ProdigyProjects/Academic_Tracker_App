@@ -40,13 +40,13 @@ class LinkPages : Fragment() {
             findNavController().navigate(R.id.toProgressTracking)
         }
 
-        binding.leaderboard.setOnClickListener {
+        /*binding.leaderboard.setOnClickListener {
             findNavController().navigate(R.id.toLeaderboard)
         }
 
         binding.peerCollaboration.setOnClickListener {
             findNavController().navigate(R.id.toPeerCollaboration)
-        }
+        }*/
 
         binding.marketplace.setOnClickListener {
             findNavController().navigate(R.id.toMarketplace)

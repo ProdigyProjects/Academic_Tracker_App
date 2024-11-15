@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.academictrackerapp.Imraan.BaseActivity
 import com.example.academictrackerapp.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class MarksListActivity : AppCompatActivity() {
+class MarksListActivity : BaseActivity() {
     private lateinit var textViewMarksList: TextView
     private val db = FirebaseFirestore.getInstance()
     private val userId = FirebaseAuth.getInstance().currentUser?.uid
