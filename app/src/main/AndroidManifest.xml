@@ -17,11 +17,15 @@
         android:theme="@style/Theme.AcademicTrackerApp"
         tools:targetApi="31">
         <activity
+            android:id="@+id/navigation_marks_list"
             android:name=".Imraan.grade.MarksListActivity"
-            android:exported="false" />
+            android:label="Grade List"
+            android:parentActivityName=".MainActivity" />
         <activity
+            android:id="@+id/navigation_marks"
             android:name=".Imraan.grade.MarksActivity"
-            android:exported="false" /> <!-- MAIN entry point activity -->
+            android:label="Add Grade"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -32,9 +36,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:id="@+id/navigation_timetable"
+            android:name=".Imraan.TimeTable.TimetableActivity"
+            android:label="Timetable"  />
+        <activity
+            android:id="@+id/navigation_timetable_creation"
+            android:name=".Imraan.TimeTable.TaskCreationActivity"
+            android:label="Add Module/Task" />
+        <activity
             android:name=".katiana.login.LoginFragment"
             android:exported="false"
-            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".katiana.registration.RegistrationFragment"

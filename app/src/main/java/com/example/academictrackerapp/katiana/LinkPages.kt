@@ -52,18 +52,6 @@ class LinkPages : Fragment() {
             findNavController().navigate(R.id.toMarketplace)
         }
 
-        // Set up the timetable button to start TimetableActivity
-        binding.timetable.setOnClickListener {
-            val intent = Intent(requireContext(), TimetableActivity::class.java)
-            startActivity(intent)
-        }
-
-        // Set up the chatbot button to navigate to MainChatBotActivity
-        binding.chatbotButton.setOnClickListener {
-            val intent = Intent(requireContext(), MainChatBotctivity::class.java)
-            startActivity(intent)
-        }
-
         return root
     }
 

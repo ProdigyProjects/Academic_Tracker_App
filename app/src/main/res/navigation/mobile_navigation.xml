@@ -27,7 +27,6 @@
 
     <fragment
         android:id="@+id/navigation_notifications_add_reminder2"
-        android:name="com.example.academictrackerapp.elvis.notifications.NotificationsSetup"
         android:label="Notifications"
         tools:layout="@layout/reminder_dialog">
     </fragment>
@@ -116,8 +115,15 @@
 
     <fragment
         android:id="@+id/navigation_timetable"
-        android:label="Dashboard"
         tools:layout="@layout/activity_timetable">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_timetable_creation"
+        tools:layout="@layout/activity_task_creation">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_marks_list"
+        tools:layout="@layout/activity_marks_list">
     </fragment>
 
     <fragment
@@ -174,7 +180,7 @@
         android:id="@+id/materialMarketplace"
         android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialMarketplace"
         android:label="Material Marketplace"
-        tools:layout="@layout/fragment_material_marketplace" />
+        tools:layout="@layout/material_marketplace" />
 
     <fragment
         android:id="@+id/materialPageView"

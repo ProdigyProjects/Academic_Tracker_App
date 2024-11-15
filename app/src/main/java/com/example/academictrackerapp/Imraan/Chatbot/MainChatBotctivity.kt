@@ -21,7 +21,11 @@ class MainChatBotctivity : ComponentActivity() {
         setContent {
             EasyBotTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ChatPage(modifier = Modifier.padding(innerPadding),chatViewModel)
+                    ChatPage(
+                        modifier = Modifier.padding(innerPadding),
+                        viewModel = chatViewModel,
+                        onBackClick = { finish() } // Closes the activity when back is pressed
+                    )
                 }
             }
         }

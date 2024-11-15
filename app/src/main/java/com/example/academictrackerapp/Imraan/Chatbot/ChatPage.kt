@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -39,18 +40,19 @@ import com.example.academictrackerapp.R
 
 import com.example.academictrackerapp.Imraan.ui.theme.ColorModelMessage
 import com.example.academictrackerapp.Imraan.ui.theme.ColorUserMessage
-import com.example.academictrackerapp.Imraan.ui.theme.Purple80
-
-
-
+import com.example.academictrackerapp.Imraan.ui.theme.PrimaryColor
 
 
 @Composable
-fun ChatPage(modifier: Modifier = Modifier,viewModel: ChatViewModel) {
+fun ChatPage(
+    modifier: Modifier = Modifier,
+    viewModel: ChatViewModel,
+    onBackClick: () -> Unit
+) {
     Column(
         modifier = modifier
     ) {
-        AppHeader()
+        AppHeader(onBackClick = onBackClick)
         MessageList(
             modifier = Modifier.weight(1f),
             messageList = viewModel.messageList
@@ -76,7 +78,7 @@ fun MessageList(modifier: Modifier = Modifier,messageList : List<MessageModel>) 
                 modifier = Modifier.size(60.dp),
                 painter = painterResource(id = R.drawable.baseline_question_answer_24),
                 contentDescription = "Icon",
-                tint = Purple80 ,
+                tint = PrimaryColor ,
             )
             Text(text = "Ask me anything", fontSize = 22.sp)
         }
@@ -153,7 +155,12 @@ fun MessageInput(onMessageSend : (String)-> Unit) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         OutlinedTextField(
-            modifier = Modifier.weight(1f),
+            placeholder = { Text("Start Now...") },
+            shape = RoundedCornerShape(8.dp),  // Rounded corners for a softer look
+            modifier = Modifier
+                .padding(all = 0.dp)
+                .height(50.dp)
+                .background(Color.White),
             value = message,
             onValueChange = {
                 message = it
@@ -175,18 +182,29 @@ fun MessageInput(onMessageSend : (String)-> Unit) {
 }
 
 @Composable
-fun AppHeader() {
+fun AppHeader(onBackClick: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .background(Color(0xFFE83256))
+            .background(PrimaryColor)
     ) {
-        Text(
-            modifier = Modifier.padding(16.dp),
-            text = "THE BOT",
-            color = Color.White,
-            fontSize = 22.sp
-        )
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            IconButton(onClick = onBackClick) {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_back_arrow), // Replace with your back arrow drawable
+                    contentDescription = "Back",
+                    tint = Color.White
+                )
+            }
+            Text(
+                text = "Academic Bot",
+                color = Color.White,
+                fontSize = 22.sp,
+                modifier = Modifier.padding(start = 8.dp)
+            )
+        }
     }
 }
 

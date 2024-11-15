@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.academictrackerapp.Imraan.Chatbot.MainChatBotctivity
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
 import com.example.academictrackerapp.Imraan.grade.MarksActivity
 import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.LinkToPages2Binding
@@ -29,10 +30,25 @@ class LinkPages2 : Fragment() {
             findNavController().navigate(R.id.toLMS)
         }
 
+        binding.chatBoot.setOnClickListener {
+            val intent = Intent(requireContext(), MainChatBotctivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.timetable.setOnClickListener {
+            val intent = Intent(requireContext(), TimetableActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.grade.setOnClickListener {
             val intent = Intent(requireContext(), MarksActivity::class.java)
             startActivity(intent)
         }
+
+        /*binding.LMS.setOnClickListener {
+            val intent = Intent(requireContext(), MarksActivity::class.java)
+            startActivity(intent)
+        }*/
 
         return root
     }
