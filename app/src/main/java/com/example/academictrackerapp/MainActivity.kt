@@ -1,5 +1,6 @@
 package com.example.academictrackerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,9 +11,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.academictrackerapp.Imraan.Chatbot.MainChatBotctivity
 import com.example.academictrackerapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
+import com.example.academictrackerapp.Imraan.grade.MarksActivity
+import com.example.academictrackerapp.Imraan.userEngagement.SupportActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -113,11 +118,30 @@ class MainActivity : AppCompatActivity() {
                 navController.navigate(R.id.navigation_link_to_pages)
                 return true
             }
-            R.id.navigation_link_to_pages2 -> {
+            R.id.navigate_to_chatbot -> {
+                // Navigate to the Material Marketplace screen
+                val intent = Intent(this, MainChatBotctivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.navigate_to_timetable -> {
+                // Navigate to the Material Marketplace screen
+                val intent = Intent(this, TimetableActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+
+            R.id.navigate_to_grade -> {
+                // Navigate to the Material Marketplace screen
+                val intent = Intent(this, MarksActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            /*R.id.navigation_link_to_pages2 -> {
                 // Navigate to the Material Marketplace screen
                 navController.navigate(R.id.navigation_link_to_pages2)
                 return true
-            }
+            }*/
             R.id.navigation_logOut -> {
                 // Log the user out of Firebase
                 FirebaseAuth.getInstance().signOut()

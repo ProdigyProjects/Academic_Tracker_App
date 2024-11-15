@@ -36,13 +36,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:id="@+id/navigation_timetable"
             android:name=".Imraan.TimeTable.TimetableActivity"
             android:label="Timetable"  />
         <activity
-            android:id="@+id/navigation_timetable_creation"
             android:name=".Imraan.TimeTable.TaskCreationActivity"
             android:label="Add Module/Task" />
+        <activity
+            android:name=".Imraan.userEngagement.SupportActivity"
+            android:label="User Support" />
         <activity
             android:name=".katiana.login.LoginFragment"
             android:exported="false"

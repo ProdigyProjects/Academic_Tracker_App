@@ -133,17 +133,19 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_support"
-        android:label="Dashboard"
-        tools:layout="@layout/activity_support">
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.academictrackerapp.katiana.dashboard.Dashboard"
         android:label="Dashboard"
         tools:layout="@layout/dashboard">
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_support"
+        android:name="com.example.academictrackerapp.Imraan.userEngagement.SupportFragment"
+        android:label="User Support"
+        tools:layout="@layout/fragment_support">
+    </fragment>
+
     <fragment
         android:id="@+id/navigation_marketplace"
         android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialMarketplace"
