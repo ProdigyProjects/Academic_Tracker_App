@@ -1,4 +1,4 @@
-package com.example.academictrackerapp.imraan.tracking
+package com.example.academictrackerapp.Imraan.tracking
 
 
 import android.os.Bundle

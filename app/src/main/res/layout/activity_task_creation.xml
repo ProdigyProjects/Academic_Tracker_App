@@ -14,23 +14,41 @@
         android:layout_marginBottom="16dp"
         android:hint="Task Name" />
 
-    <Spinner
-        android:id="@+id/day_spinner"
-        android:layout_height="40dp"
-        android:padding="8dp"
-        android:layout_marginBottom="16dp"
-        android:layout_width="match_parent"/>
-
-    <Spinner
-        android:id="@+id/time_spinner"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:padding="8dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/day_spinner"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/time_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="8dp" />
+    </LinearLayout>
+
+
 
     <Button
         android:id="@+id/color_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:layout_marginBottom="16dp"
@@ -38,8 +56,8 @@
 
     <Button
         android:id="@+id/submit_task_button"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Submit" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 
 </LinearLayout>

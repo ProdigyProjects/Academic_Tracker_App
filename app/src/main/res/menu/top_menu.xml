@@ -8,10 +8,25 @@
         app:showAsAction="never">
     </item>
     <item
+        android:id="@+id/navigate_to_chatbot"
+        android:title="ChatBot"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/navigate_to_timetable"
+        android:title="Timetable"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/navigate_to_grade"
+        android:title="Grades"
+        app:showAsAction="never">
+    </item>
+    <!--<item
         android:id="@+id/navigation_link_to_pages2"
         android:title="@string/additional_features"
         app:showAsAction="never">
-    </item>
+    </item>-->
     <item
         android:id="@+id/navigation_logOut"
         android:title="@string/log_out"

@@ -1,11 +1,15 @@
 package com.example.academictrackerapp.katiana
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.academictrackerapp.Imraan.Chatbot.MainChatBotctivity
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
+import com.example.academictrackerapp.Imraan.grade.MarksActivity
 import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.LinkToPages2Binding
 
@@ -19,25 +23,32 @@ class LinkPages2 : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = LinkToPages2Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        /*binding.LMS.setOnClickListener {
+            findNavController().navigate(R.id.toLMS)
+        }*/
+
         binding.chatBoot.setOnClickListener {
-            findNavController().navigate(R.id.toChatBoot)
+            val intent = Intent(requireContext(), MainChatBotctivity::class.java)
+            startActivity(intent)
         }
 
         binding.timetable.setOnClickListener {
-            findNavController().navigate(R.id.toTimetable)
+            val intent = Intent(requireContext(), TimetableActivity::class.java)
+            startActivity(intent)
         }
 
         binding.grade.setOnClickListener {
-            findNavController().navigate(R.id.toGrade)
+            val intent = Intent(requireContext(), MarksActivity::class.java)
+            startActivity(intent)
         }
 
-        binding.LMS.setOnClickListener {
-            findNavController().navigate(R.id.toLMS)
-        }
+        /*binding.LMS.setOnClickListener {
+            val intent = Intent(requireContext(), MarksActivity::class.java)
+            startActivity(intent)
+        }*/
 
         return root
     }

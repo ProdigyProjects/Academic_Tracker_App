@@ -11,11 +11,10 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.academictrackerapp.Imraan.BaseActivity
 import com.example.academictrackerapp.R
 import yuku.ambilwarna.AmbilWarnaDialog // Import for AmbilWarna
 
-class TaskCreationActivity : BaseActivity() {
+class TaskCreationActivity : AppCompatActivity() {
     private lateinit var taskName: EditText
     private lateinit var daySpinner: Spinner
     private lateinit var timeSpinner: Spinner

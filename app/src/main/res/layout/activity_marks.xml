@@ -33,14 +33,14 @@
 
         <Button
             android:id="@+id/buttonSaveMarks"
-            android:layout_width="180dp"
+            android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
             android:text="Save Marks"/>
 
         <Button
             android:id="@+id/buttonViewMarks"
-            android:layout_width="180dp"
+            android:layout_width="155dp"
             android:layout_height="wrap_content"
             android:text="View Marks" />
 
