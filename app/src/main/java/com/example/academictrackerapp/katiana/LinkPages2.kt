@@ -26,9 +26,9 @@ class LinkPages2 : Fragment() {
         _binding = LinkToPages2Binding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.LMS.setOnClickListener {
+        /*binding.LMS.setOnClickListener {
             findNavController().navigate(R.id.toLMS)
-        }
+        }*/
 
         binding.chatBoot.setOnClickListener {
             val intent = Intent(requireContext(), MainChatBotctivity::class.java)

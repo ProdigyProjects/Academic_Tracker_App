@@ -94,24 +94,24 @@
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
     </fragment>
 
-    <fragment
+    <!--<fragment
         android:id="@+id/navigation_link_to_pages2"
         android:name="com.example.academictrackerapp.katiana.LinkPages2"
         android:label="Main Features"
         tools:layout="@layout/link_to_pages2">
         <action
             android:id="@+id/toChatBoot"
-            app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_marketplace" />
         <action
             android:id="@+id/toTimetable"
-            app:destination="@id/navigation_timetable" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_timetable" />
         <action
             android:id="@+id/toGrade"
-            app:destination="@id/navigation_marks" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_marks" />
         <action
             android:id="@+id/toLMS"
-            app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
-    </fragment>
+            app:destination="@id/navigation_marketplace" />
+    </fragment>-->
 
     <fragment
         android:id="@+id/navigation_timetable"
@@ -177,12 +177,6 @@
         android:label="Material Selected"
         tools:layout="@layout/material_page_view">
     </fragment>
-
-    <fragment
-        android:id="@+id/materialMarketplace"
-        android:name="com.example.academictrackerapp.katiana.materialMarketplace.MaterialMarketplace"
-        android:label="Material Marketplace"
-        tools:layout="@layout/material_marketplace" />
 
     <fragment
         android:id="@+id/materialPageView"
