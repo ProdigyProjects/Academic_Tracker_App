@@ -52,23 +52,46 @@ class TaskCreationActivity : BaseActivity() {
         // Set up the submit button listener
         submitTaskButton.setOnClickListener {
             val task = taskName.text.toString()
-            val day = daySpinner.selectedItem.toString()
-            val time = timeSpinner.selectedItem.toString()
+            val day = daySpinner.selectedItem?.toString()
+            val time = timeSpinner.selectedItem?.toString()
 
-            if (task.isNotEmpty()) {
-                val resultIntent = Intent()
-                resultIntent.putExtra("task", task)
-                resultIntent.putExtra("day", day)
-                resultIntent.putExtra("time", time)
-                resultIntent.putExtra("color", selectedColor)
-
-                // Set the result to OK and finish the activity
-                setResult(Activity.RESULT_OK, resultIntent)
-                finish() // This returns to the TimetableActivity
-            } else {
+            // Validate task name
+            if (task.isEmpty()) {
                 Toast.makeText(this, "Please enter a task name", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
+
+            // Validate day selection
+            if (day.isNullOrEmpty()) {
+                Toast.makeText(this, "Please select a day", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Validate time selection
+            if (time.isNullOrEmpty()) {
+                Toast.makeText(this, "Please select a time", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Validate color selection (default is RED, check if unchanged)
+            if (selectedColor == Color.RED) {
+                Toast.makeText(this, "Please select a color", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            // Create result intent and pass data back
+            val resultIntent = Intent().apply {
+                putExtra("task", task)
+                putExtra("day", day)
+                putExtra("time", time)
+                putExtra("color", selectedColor)
+            }
+
+            // Set result and finish activity
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
         }
+
     }
 
     private fun showColorPickerDialog() {
