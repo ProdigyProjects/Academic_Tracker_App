@@ -6,11 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.academictrackerapp.Imraan.BaseActivity
 import com.example.academictrackerapp.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
-class MarksActivity : AppCompatActivity() {
+class MarksActivity : BaseActivity() {
     private lateinit var editTextSubject: EditText
     private lateinit var editTextMarks: EditText
     private lateinit var buttonSaveMarks: Button
