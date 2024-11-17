@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".prisca.controller.NoGoalFragment">
+
+        <!-- ScrollView to prevent content from being cut off on smaller screens -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Main Content Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Header Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="16dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <!-- Content Area with ConstraintLayout -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Calendar View -->
+                    <CalendarView
+                        android:id="@+id/calendar_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- "No Goals" Message -->
+                    <TextView
+                        android:id="@+id/no_goals_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="You have no goals"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/calendar_view" />
+
+                    <!-- Instruction to Add Goal -->
+                    <TextView
+                        android:id="@+id/add_goal_instruction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Click on the plus button to add a new goal"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/no_goals_text" />
+
+                    <!-- Add Goal Button -->
+                    <ImageButton
+                        android:id="@+id/add_goal_button"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:contentDescription="Add goal"
+                        android:src="@drawable/baseline_add_circle_outline_24"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/add_goal_instruction"
+                        app:tint="@android:color/white" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/viewAllGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="view all"
+                    app:layout_constraintTop_toBottomOf="@id/passwordInput"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="24dp" />
+            </LinearLayout>
+
+        </ScrollView>
+    </FrameLayout>
