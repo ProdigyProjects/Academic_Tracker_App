@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.academictrackerapp.prisca.controller.CreateGoalFragment">
+
+        <!-- ScrollView to prevent content from being cut off on smaller screens -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Main Content Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Header Bar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="20dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <!-- Image Add Section -->
+                <LinearLayout
+                    android:id="@+id/image_add_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp">
+
+                    <Button
+                        android:id="@+id/add_image_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/image"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Add image"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:id="@+id/added_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <!-- Main Content -->
+                <!-- Goal Title Section -->
+                <LinearLayout
+                    android:id="@+id/main_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="19dp">
+
+                    <!-- Label for Goal Title -->
+                    <TextView
+                        android:id="@+id/goal_title_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Goal Title"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="0dp" />
+
+                    <!-- EditText for user to enter the goal title -->
+                    <EditText
+                        android:id="@+id/goal_title_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Enter your goal title"
+                        android:padding="10dp"
+                        android:textSize="24sp" />
+
+                    <!-- Label for Goal Description -->
+                    <TextView
+                        android:id="@+id/goal_description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp" />
+
+                    <!-- EditText for user to enter the description -->
+                    <EditText
+                        android:id="@+id/goal_description_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Enter your description"
+                        android:padding="10dp"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Goal Options -->
+                <LinearLayout
+                    android:id="@+id/goal_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:padding="8dp">
+
+                    <!-- Category Section -->
+                    <EditText
+                        android:id="@+id/goal_category"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/primaryColor"
+                        android:gravity="center"
+                        android:hint="Category"
+                        android:padding="14dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <!-- Due Date Section -->
+                    <LinearLayout
+                        android:id="@+id/due_date_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@color/primaryColor"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
+
+                        <ImageView
+                            android:id="@+id/calendar_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Calendar_icon_desc"
+                            android:src="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/due_date_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Due Date"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Set Reminder Section -->
+                    <LinearLayout
+                        android:id="@+id/reminder_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="67dp"
+                        android:layout_weight="1"
+                        android:background="@color/primaryColor"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
+
+                        <ImageView
+                            android:id="@+id/clock_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="Clock_icon_desc"
+                            android:src="@drawable/ic_clock" />
+
+                        <TextView
+                            android:id="@+id/reminder_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Reminder Time"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <!-- Divider -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="21dp"
+                                android:background="#a39797" />
+
+                            <!-- Habit Section -->
+                            <TextView
+                                android:id="@+id/habit_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Habit"
+                                android:textSize="24sp"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/habit_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <!-- List of habits will be populated dynamically -->
+                            </LinearLayout>
+
+                            <!-- Horizontal LinearLayout for Habit Button -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="8dp">
+
+                                <Button
+                                    android:id="@+id/add_habit_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+ Add Habit"
+                                    android:layout_weight="1"
+                                    tools:ignore="VisualLintButtonSize" />
+
+                            </LinearLayout>
+
+                            <!-- Task Section -->
+                            <TextView
+                                android:id="@+id/task_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Task"
+                                android:textSize="24sp"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:layout_marginTop="24dp" />
+
+                            <LinearLayout
+                                android:id="@+id/task_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <!-- List of tasks will be populated dynamically -->
+                            </LinearLayout>
+
+                            <!-- Horizontal LinearLayout for Task Button -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="8dp">
+
+                                <Button
+                                    android:id="@+id/add_task_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="+ Add Task"
+                                    android:layout_weight="1" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <!-- Note Section -->
+                    <TextView
+                        android:id="@+id/note_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Note"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:id="@+id/note_input"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:hint="Add your note..."
+                                android:inputType="textMultiLine"
+                                android:lines="5"
+                                android:minHeight="100dp"
+                                android:padding="14dp" />
+                        </ScrollView>
+
+                        <!-- Resize handle (optional visual cue) -->
+                        <View
+                            android:id="@+id/resize_handle"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="@color/primaryColor"
+                            android:layout_gravity="bottom" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#a39797" />
+
+                    <Button
+                        android:id="@+id/create_goal_button"
+                        android:layout_width="447dp"
+                        android:layout_height="63dp"
+                        android:text="Create Goals"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>

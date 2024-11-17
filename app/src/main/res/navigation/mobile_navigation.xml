@@ -79,7 +79,7 @@
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
         <action
             android:id="@+id/toGoalsSettings"
-            app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
+            app:destination="@id/navigation_no_goal" /> <!-- change to your fragment name-->
         <action
             android:id="@+id/toProgressTracking"
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
@@ -93,6 +93,86 @@
             android:id="@+id/toMarketplace"
             app:destination="@id/navigation_marketplace" /> <!-- change to your fragment name-->
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_no_goal"
+        android:name="com.example.academictrackerapp.prisca.controller.NoGoalFragment"
+        android:label="Goal Settings"
+        tools:layout="@layout/fragment_no_goal" >
+        <action
+            android:id="@+id/toCreateGoal"
+            app:destination="@id/navigation_create_goal" />
+        <action
+            android:id="@+id/toGoalList"
+            app:destination="@id/navigation_goal_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_create_goal"
+        android:name="com.example.academictrackerapp.prisca.controller.CreateGoalFragment"
+        android:label="Create Goal"
+        tools:layout="@layout/fragment_create_goal" >
+        <action
+            android:id="@+id/toHabit"
+            app:destination="@id/navigation_habit" />
+        <action
+            android:id="@+id/toTask"
+            app:destination="@id/navigation_task" />
+        <action
+            android:id="@+id/toGoalList"
+            app:destination="@id/navigation_goal_list" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_habit"
+        android:name="com.example.academictrackerapp.prisca.controller.HabitFragment"
+        android:label="Habit"
+        tools:layout="@layout/fragment_habit" >
+        <action
+            android:id="@+id/toCreateGoal"
+            app:destination="@id/navigation_create_goal" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_task"
+        android:name="com.example.academictrackerapp.prisca.controller.TaskFragment"
+        android:label="Task"
+        tools:layout="@layout/fragment_task"  >
+        <action
+            android:id="@+id/toCreateGoal"
+            app:destination="@id/navigation_create_goal" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_goal_list"
+        android:name="com.example.academictrackerapp.prisca.controller.GoalListFragment"
+        android:label="My goals"
+        tools:layout="@layout/fragment_goal_list">
+        <action
+            android:id="@+id/toEdit"
+            app:destination="@id/navigation_edit" />
+        <action
+            android:id="@+id/toViewGoal"
+            app:destination="@id/navigation_view_goal" />
+        <action
+            android:id="@+id/toCreateGoal"
+            app:destination="@id/navigation_create_goal" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_edit"
+        android:name="com.example.academictrackerapp.prisca.controller.EditGoalFragment"
+        android:label="Edit goal"
+        tools:layout="@layout/fragment_edit" />
+    <fragment
+        android:id="@+id/navigation_view_goal"
+        android:name="com.example.academictrackerapp.prisca.controller.ViewGoalFragment"
+        android:label="View Goal"
+        tools:layout="@layout/fragment_view_goal" >
+        <action
+            android:id="@+id/toPraise"
+            app:destination="@id/navigation_praise" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_praise"
+        android:name="com.example.academictrackerapp.prisca.controller.PraiseFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_praise" />
 
     <!--<fragment
         android:id="@+id/navigation_link_to_pages2"
