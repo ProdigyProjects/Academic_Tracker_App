@@ -43,7 +43,7 @@
             android:background="@drawable/edit_text_background"
             android:padding="8dp"
             android:inputType="textEmailAddress"
-            android:id="@+id/Email"/>
+            android:id="@+id/emailInput"/>
 
         <EditText
             android:gravity="top|left"
@@ -54,6 +54,7 @@
             android:hint="Question"
             android:inputType="text"
             android:padding="8dp"
+            android:id="@+id/questionInput"
             android:textSize="16dp" />
 
         <Button
@@ -62,6 +63,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/primaryColor"
             android:padding="8dp"
+            android:id="@+id/sendButton"
             android:text="Send"
             android:textColor="@color/white"
             android:layout_marginTop="24dp"
