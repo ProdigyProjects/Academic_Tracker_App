@@ -24,7 +24,9 @@ import com.example.academictrackerapp.prisca.model.repositories.GoalRepository
 import com.google.firebase.auth.FirebaseAuth
 import java.io.InputStream
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 class CreateGoalFragment : Fragment() {
 
@@ -132,7 +134,8 @@ class CreateGoalFragment : Fragment() {
             habitIds = habitIds, // Set the habit ID
             note = note, // Set the note IDs
             taskIds = taskIds, // Set the task IDs
-            userId = userId // Set the user ID
+            userId = userId, // Set the user ID
+            isAchieved = false
         )
 
         goalRepository.createGoal(goal, {

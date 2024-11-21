@@ -70,13 +70,14 @@
 
         </LinearLayout>
 
+        <!-- Progress Overview Section -->
         <TextView
             android:id="@+id/progressText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Progress: 80%"
-            android:textSize="14sp"/>
-        <!-- Progress Overview Section -->
+            android:textSize="14sp" />
+
         <LinearLayout
             android:id="@+id/progressOverviewTitleBox"
             android:layout_width="match_parent"
@@ -126,7 +127,7 @@
                     android:id="@+id/completionRateTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Completion Rate"
+                    android:text="Study Patterns"
                     android:textSize="14sp"/>
 
                 <TextView
@@ -235,7 +236,7 @@
                         android:orientation="vertical"
                         android:layout_marginStart="8dp">
                         <TextView
-                            android:id="@+id/algebraPracticeScore"
+                            android:id="@+id/subjectScore"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="50%"
@@ -318,6 +319,7 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- Study Personalised Insights Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -350,7 +352,7 @@
                 android:id="@+id/recommendationsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recommendations"
+                android:text="Study Recommendations"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:paddingTop="16dp"/>
@@ -382,7 +384,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Study Recommendations"
+                    android:text="Focus on these Subjects"
                     android:textStyle="bold"
                     android:textSize="18sp"/>
 
@@ -421,6 +423,7 @@
                     android:layout_marginStart="8dp">
 
                     <TextView
+                        android:id="@+id/subjectName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chemistry"
@@ -429,6 +432,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/subjectDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Covers key concepts in Chemistry"
@@ -438,6 +442,7 @@
 
                 <!-- Price and Icons -->
                 <TextView
+                    android:id="@+id/timeToStudy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="45min"

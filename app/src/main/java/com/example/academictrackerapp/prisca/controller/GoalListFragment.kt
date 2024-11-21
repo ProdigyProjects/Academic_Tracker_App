@@ -87,7 +87,7 @@ class GoalListFragment : Fragment() {
         Log.e("GoalListFragment", "Error loading goals: ${exception.message}")
         binding.errorMessage.visibility = View.VISIBLE
         binding.recyclerViewGoals.visibility = View.GONE
-        Toast.makeText(requireContext(), "Error loading goals: ${exception.message}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(requireContext(), "No goals to load: ${exception.message}", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroyView() {

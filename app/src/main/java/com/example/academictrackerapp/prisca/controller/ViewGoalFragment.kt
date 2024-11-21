@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.academictrackerapp.R
 import com.example.academictrackerapp.databinding.FragmentViewGoalBinding
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -49,7 +51,14 @@ class ViewGoalFragment : Fragment() {
                     binding.goalDescription.text = document.getString("description") ?: "No Description"
                     binding.goalCategory.text = document.getString("category") ?: "No Category"
                     binding.dueDate.text = document.getString("dueDate") ?: "No Due Date"
-                    binding.reminderTime.text = document.getString("reminderTime") ?: "No Reminder Time"
+                    binding.reminderTime.text = document.getString("reminderId") ?: "No Reminder Time"
+
+                    val isAchieved = document.getBoolean("isAchieved") ?: false
+                    binding.status.text = if (isAchieved) {
+                        "Completed"
+                    } else {
+                        "Not Completed"
+                    }
                 } else {
                     Toast.makeText(requireContext(), "Goal not found", Toast.LENGTH_SHORT).show()
                 }
@@ -65,6 +74,7 @@ class ViewGoalFragment : Fragment() {
             .update("isAchieved", true)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "Goal marked as achieved", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.toPraise)
             }
             .addOnFailureListener { exception ->
                 Log.e("ViewGoalFragment", "Error marking goal as achieved: ${exception.message}")

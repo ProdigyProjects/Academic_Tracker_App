@@ -17,43 +17,201 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:id="@+id/goal_title"
-                android:layout_width="wrap_content"
+            <!-- Image Add Section -->
+            <LinearLayout
+                android:id="@+id/image_add_section"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
 
-            <TextView
-                android:id="@+id/goal_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/added_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image" />
 
-            <TextView
-                android:id="@+id/goal_category"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_image_button"
+                    android:layout_width="55dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="-60dp"
+                    android:layout_marginRight="90dp"
+                    android:backgroundTint="?attr/colorOnPrimary"
+                    android:clickable="true"
+                    android:scaleType="center"
+                    android:contentDescription="@string/todo"
+                    android:focusable="true"
+                    android:src="@drawable/camera_upload_photo" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/due_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
+            <!-- Goal Title Section -->
+            <LinearLayout
+                android:id="@+id/main_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/reminder_time"
-                android:layout_width="wrap_content"
+                <!-- Label for Goal Title -->
+                <TextView
+                    android:id="@+id/goal_title_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="Goal Title"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp" />
+
+                <!-- EditText for user to enter the goal title -->
+                <TextView
+                    android:id="@+id/goalTitle"
+                    android:hint="Enter your goal title"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Label for Goal Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp" />
+
+                <!-- EditText for user to enter the description -->
+                <TextView
+                    android:id="@+id/goalDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:hint="Enter your description"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:background="@drawable/edit_text_background"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Label for Goal Description -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="16dp" />
+
+                <!-- EditText for user to enter the description -->
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:background="@drawable/edit_text_background"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <!-- Goal Options -->
+            <LinearLayout
+                android:id="@+id/goal_options"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="8dp"
+                android:background="@color/grey">
+
+                <!-- Category Section -->
+                <TextView
+                    android:id="@+id/goal_category"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/primaryColor"
+                    android:gravity="center"
+                    android:hint="Category"
+                    android:padding="12dp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <!-- Due Date Section -->
+                <LinearLayout
+                    android:id="@+id/due_date_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@color/primaryColor"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/calendar_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"
+                        android:contentDescription="Due Date" />
+
+                    <TextView
+                        android:id="@+id/dueDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Due Date"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Set Reminder Section -->
+                <LinearLayout
+                    android:id="@+id/reminder_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@color/primaryColor"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/clock_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/reminderTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Reminder"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
 
             <TextView
                 android:text="Tasks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_tasks"
@@ -65,8 +223,10 @@
                 android:text="Habits"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp" />
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_habits"
@@ -87,30 +247,32 @@
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false" />
 
+            <!-- Bottom Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white">
+
+                <Button
+                    android:id="@+id/button_achieved"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mark as Achieved" />
+
+                <Button
+                    android:id="@+id/button_delete"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete Goal" />
+            </LinearLayout>
+
         </LinearLayout>
+
     </ScrollView>
-
-    <!-- Bottom Buttons -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@android:color/white">
-
-        <Button
-            android:id="@+id/button_achieved"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Mark as Achieved" />
-
-        <Button
-            android:id="@+id/button_delete"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Delete Goal" />
-    </LinearLayout>
 </FrameLayout>

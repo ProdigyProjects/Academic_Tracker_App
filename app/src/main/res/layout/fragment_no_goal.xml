@@ -70,29 +70,36 @@
                         app:layout_constraintTop_toBottomOf="@id/no_goals_text" />
 
                     <!-- Add Goal Button -->
+
                     <ImageButton
                         android:id="@+id/add_goal_button"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="24dp"
                         android:backgroundTint="@android:color/holo_blue_dark"
                         android:contentDescription="Add goal"
                         android:src="@drawable/baseline_add_circle_outline_24"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.383"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/add_goal_instruction"
+                        app:tint="@android:color/white" />
+
+                    <ImageButton
+                        android:id="@+id/viewAllGoals"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="24dp"
+                        android:backgroundTint="@android:color/holo_blue_dark"
+                        android:contentDescription="View goal"
+                        android:src="@drawable/baseline_remove_red_eye_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.616"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/add_goal_instruction"
                         app:tint="@android:color/white" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <Button
-                    android:id="@+id/viewAllGoals"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="view all"
-                    app:layout_constraintTop_toBottomOf="@id/passwordInput"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="24dp" />
             </LinearLayout>
 
         </ScrollView>

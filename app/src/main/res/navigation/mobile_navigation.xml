@@ -65,8 +65,17 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_dashboard">
         <action
-            android:id="@+id/toMaterialMarket"
-            app:destination="@id/navigation_marketplace" />
+            android:id="@+id/toSupport"
+            app:destination="@id/navigation_support" />
+        <action
+            android:id="@+id/toDashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/toReminders"
+            app:destination="@id/navigation_notifications" />
+        <action
+            android:id="@+id/toGoalsSettings"
+            app:destination="@id/navigation_no_goal" />
     </fragment>
 
     <fragment

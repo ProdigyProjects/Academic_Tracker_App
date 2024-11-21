@@ -14,6 +14,7 @@ data class Goal(
     val taskIds: List<String> = emptyList(),
     //val noteId: List<String> = emptyList(),
     val note: String = "",
+    @field:JvmField // Ensures proper naming for Firebase
     val isAchieved: Boolean = false
 ) {
 

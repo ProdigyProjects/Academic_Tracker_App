@@ -13,14 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Header Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:orientation="horizontal">
-            <!-- Header content can go here -->
-        </LinearLayout>
+
 
         <!-- Habit Container -->
         <LinearLayout
@@ -43,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Habit Title"
-                    android:textSize="24sp"
+                    android:textSize="16sp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:layout_marginBottom="0dp" />
@@ -61,23 +54,25 @@
             <!-- EditText for user to enter the habit title -->
             <EditText
                 android:id="@+id/habit_title_input"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:hint="Enter your habit title"
-                android:padding="10dp"
-                android:textSize="24sp" />
+                android:background="@drawable/edit_text_background"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="8dp"  />
 
             <TextView
                 android:id="@+id/frequency_label"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Select Days"
-                android:layout_marginTop="22dp"
-                android:paddingStart="20dp"
-                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="0dp" />
 
             <!-- Day Selector -->
@@ -88,7 +83,7 @@
 
                 <LinearLayout
                     android:id="@+id/day_selector"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center">
@@ -97,123 +92,100 @@
                         android:id="@+id/checkbox_sun"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="S" />
+                        android:text="Sun" />
 
                     <CheckBox
                         android:id="@+id/checkbox_mon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="M" />
+                        android:text="Mon" />
 
                     <CheckBox
                         android:id="@+id/checkbox_tue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="T" />
+                        android:text="Tue" />
 
                     <CheckBox
                         android:id="@+id/checkbox_wed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="W" />
+                        android:text="Wed" />
 
                     <CheckBox
                         android:id="@+id/checkbox_thu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="T" />
+                        android:text="Thr" />
 
                     <CheckBox
                         android:id="@+id/checkbox_fri"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="F" />
+                        android:text="Fri" />
 
                     <CheckBox
                         android:id="@+id/checkboxSat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="S" />
+                        android:text="Sat" />
 
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Due Date Section -->
+            <!-- Goal Options -->
             <LinearLayout
-                android:id="@+id/due_date_layout"
+                android:id="@+id/goal_options"
                 android:layout_width="match_parent"
-                android:layout_height="292dp"
-                android:orientation="vertical"
-                android:padding="19dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@color/grey">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Due Date"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
 
+                <!-- Due Date Section -->
                 <LinearLayout
-                    android:layout_width="314dp"
-                    android:layout_height="154dp"
+                    android:id="@+id/calendar_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
                     android:background="@color/primaryColor"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="14dp">
+                    android:padding="12dp">
 
                     <ImageView
-                        android:id="@+id/calendar_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="Calendar_icon_desc"
-                        android:src="@drawable/ic_calendar" />
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_calendar"
+                        android:contentDescription="Due Date" />
 
                     <TextView
                         android:id="@+id/due_date_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text=""
-                        android:textColor="@android:color/white"
+                        android:text="Due Date"
                         android:textStyle="bold" />
-
                 </LinearLayout>
-            </LinearLayout>
 
-            <!-- Set Reminder Section -->
-            <LinearLayout
-                android:id="@+id/reminder_layout"
-                android:layout_width="match_parent"
-                android:layout_height="292dp"
-                android:orientation="vertical"
-                android:padding="19dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Reminder"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
+                <!-- Set Reminder Section -->
                 <LinearLayout
-                    android:layout_width="315dp"
-                    android:layout_height="95dp"
-                    android:layout_marginEnd="8dp"
+                    android:id="@+id/clock_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_weight="1"
                     android:background="@color/primaryColor"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:padding="14dp">
+                    android:padding="12dp">
 
                     <ImageView
-                        android:id="@+id/clock_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="Clock_icon_desc"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:src="@drawable/ic_clock" />
 
                     <TextView
@@ -221,23 +193,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text=""
-                        android:textColor="@android:color/white"
+                        android:text="Time"
                         android:textStyle="bold" />
                 </LinearLayout>
-                </LinearLayout>
+            </LinearLayout>
+
             </LinearLayout>
 
             <!-- Note Section -->
             <TextView
                 android:id="@+id/note_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Note"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"/>
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -259,11 +231,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="top"
+                            android:background="@drawable/edit_text_background"
                             android:hint="Add your note..."
                             android:inputType="textMultiLine"
                             android:lines="5"
                             android:minHeight="100dp"
                             android:padding="14dp" />
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#a39797" />
 
                         <Button
                             android:id="@+id/save_habit_button"
@@ -271,8 +251,8 @@
                             android:layout_height="wrap_content"
                             android:text="Save Habit"
                             android:textColor="@android:color/white"
-                            android:textSize="24sp"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:layout_marginTop="16dp"/>
 
                     </LinearLayout>
 

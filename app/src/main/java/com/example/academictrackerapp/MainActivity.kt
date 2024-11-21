@@ -12,12 +12,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.academictrackerapp.Imraan.Chatbot.MainChatBotctivity
+import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
+import com.example.academictrackerapp.Imraan.grade.MarksActivity
 import com.example.academictrackerapp.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.example.academictrackerapp.Imraan.TimeTable.TimetableActivity
-import com.example.academictrackerapp.Imraan.grade.MarksActivity
-import com.example.academictrackerapp.Imraan.userEngagement.SupportActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -66,6 +65,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.navigation_welcome -> {
+                    // Hide the app bar and bottom navigation on the Welcome page
+                    supportActionBar?.hide()
+                    navView.visibility = View.GONE
+                }
+
+                R.id.navigation_praise -> {
                     // Hide the app bar and bottom navigation on the Welcome page
                     supportActionBar?.hide()
                     navView.visibility = View.GONE
