@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".katiana.materialMarketplace.MaterialPageView">
+    tools:context=".katiana.materialMarketplace.MaterialPageView"
+    android:padding="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,6 +20,7 @@
             android:layout_height="130dp"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
+            android:src="@drawable/image"
             app:strokeColor="@color/white"
             app:strokeWidth="2dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,15 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="16dp" />
 
+            <!-- Faculty or Subject -->
+            <TextView
+                android:id="@+id/materialFaculty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Faculty: Science"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
             <!-- Price -->
             <TextView
                 android:id="@+id/materialPrice"
@@ -65,15 +75,39 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="16dp" />
 
-            <!-- Download Section -->
-            <Button
-                android:id="@+id/buttonDownload"
+            <!-- Rating Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate this material:"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <RatingBar
+                android:id="@+id/materialRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- File Download Section -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Download"
-                android:textColor="@android:color/white"
+                android:layout_marginBottom="8dp"
+                android:text="Download File"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:backgroundTint="@color/primaryColor"
-                android:layout_marginBottom="12dp" />
+                android:text="Download"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
